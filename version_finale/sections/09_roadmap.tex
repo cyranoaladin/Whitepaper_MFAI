@@ -1,0 +1,63 @@
+% ==============================================================================
+% SECTION 09 — Roadmap & Deployment Phases
+% ==============================================================================
+
+\section{Roadmap \& Deployment Phases}
+
+\subsection{Vision-Driven Deployment}
+A \mfaiconcept{roadmap} is not just a technical release schedule; it is the narrative backbone of Money Factory AI. Each deployment phase is designed to activate a new dimension of the protocol—technical, community, economic, or educational—reflecting our philosophy of progressive cognitive activation and collective empowerment. This vision-driven approach ensures that every milestone delivers tangible value and advances the protocol’s mission.
+
+\subsection{Protocol Activation Timeline}
+The deployment of Money Factory AI unfolds in strategic phases, each with concrete deliverables and progressive activation of key modules:
+
+\begin{itemize}
+  \item \textbf{Phase 0 — Seeding \& Community Activation:} Manifesto publication, founding community, Zyno v1 design, Proof Pass prototype.
+  \item \textbf{Phase 1 — Launch of Protocol Core:} Zyno beta, Academy v1, staking, DAO beta.
+  \item \textbf{Phase 2 — Cognitive Proof Infrastructure:} AEPO/AECO stable, Proof-of-Skill\texttrademark{} live, Gold Pass launch.
+  \item \textbf{Phase 3 — Full Protocol Deployment:} Launchpad, Synaptic Governance, Neuro-Dividends\texttrademark{}, Platinum \& Diamond Passes.
+  \item \textbf{Phase 4 — Scaling \& Interoperability:} Multilingual rollout, Zyno SaaS API, L2/L3 interoperability, Web2 partner integrations.
+  \item \textbf{Phase 5 — DAO Fully Live:} Self-governance, feedback loops, community-driven updates, scalable DAO.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=2.8cm, y=2cm,
+  phase/.style={rectangle,draw=solana-purple,fill=solana-light,thick,rounded corners,minimum width=3.2cm,minimum height=1.2cm},
+  module/.style={ellipse,draw=solana-cyan,fill=solana-light,thick,minimum width=2.2cm,minimum height=0.9cm},
+  arrow/.style={->,thick,draw=solana-green}]
+
+% Phases (vertical timeline)
+
+  \node[phase] (p0) at (0,0) {\shortstack{\textbf{Phase 0} \\ Seeding \\ Community}};
+  \node[phase] (p1) at (0,-1.8) {\shortstack{\textbf{Phase 1} \\ Protocol Core}};
+  \node[phase] (p2) at (0,-3.6) {\shortstack{\textbf{Phase 2} \\ Proof Infra}};
+  \node[phase] (p3) at (0,-5.4) {\shortstack{\textbf{Phase 3} \\ Full Deployment}};
+  \node[phase] (p4) at (0,-7.2) {\shortstack{\textbf{Phase 4} \\ Scaling}};
+  \node[phase] (p5) at (0,-9) {\shortstack{\textbf{Phase 5} \\ DAO Live}};
+
+% Arrows between phases
+  \draw[arrow] (p0) -- (p1);
+  \draw[arrow] (p1) -- (p2);
+  \draw[arrow] (p2) -- (p3);
+  \draw[arrow] (p3) -- (p4);
+  \draw[arrow] (p4) -- (p5);
+
+% Modules for each phase
+  \node[module, right=2.3cm of p0] (m0) {Manifesto, Zyno v1, Proof Pass};
+  \node[module, right=2.3cm of p1] (m1) {Zyno Beta, Academy, DAO};
+  \node[module, right=2.3cm of p2] (m2) {AEPO/AECO, Proof-of-Skill, Gold Pass};
+  \node[module, right=2.3cm of p3] (m3) {Launchpad, Synaptic Gov., Neuro-Dividends};
+  \node[module, right=2.3cm of p4] (m4) {Zyno SaaS, L2/L3, Partners};
+  \node[module, right=2.3cm of p5] (m5) {DAO Autonomy, Updates};
+
+% Connect phases to modules
+  \draw[->,thick,draw=solana-cyan] (p0) -- (m0);
+  \draw[->,thick,draw=solana-cyan] (p1) -- (m1);
+  \draw[->,thick,draw=solana-cyan] (p2) -- (m2);
+  \draw[->,thick,draw=solana-cyan] (p3) -- (m3);
+  \draw[->,thick,draw=solana-cyan] (p4) -- (m4);
+  \draw[->,thick,draw=solana-cyan] (p5) -- (m5);
+
+\end{tikzpicture}
+\caption{Money Factory AI Deployment Roadmap: each phase activates new protocol axes and modules.}
+\end{figure}

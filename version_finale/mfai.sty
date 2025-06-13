@@ -1,0 +1,276 @@
+% =============================================================================
+% Money Factory AI — Whitepaper Unified Style vFusion
+% =============================================================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mfai-vFusion}[2025/05/26 MFAI Whitepaper Unified Style]
+
+% Encodage et langue
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[french,english]{babel}
+
+% Typo
+\RequirePackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Interligne et paragraphes
+\RequirePackage{setspace}
+\setstretch{1.15}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+\RequirePackage{ifthen}
+% Couleurs (Palette Solana étendue)
+\RequirePackage{xcolor}
+\definecolor{solana-purple}{HTML}{9945FF}
+\definecolor{solana-green}{HTML}{14F195}
+\definecolor{solana-cyan}{HTML}{03E1FF}
+\definecolor{solana-red}{HTML}{FF5757}
+\definecolor{solana-yellow}{HTML}{FFB800}
+\definecolor{solana-light}{HTML}{E8DFFF}
+\definecolor{solana-lightpurple}{RGB}{180,120,255}
+\definecolor{bg-box}{HTML}{F3F0FF}
+\definecolor{bg-secondary}{HTML}{EEF9F1}
+
+% Dégradés phases protocolaires
+\definecolor{phase-learn}{RGB}{153,69,255}
+\definecolor{phase-build}{RGB}{20,241,149}
+\definecolor{phase-prove}{RGB}{0,255,252}
+\definecolor{phase-activate}{RGB}{255,69,153}
+\definecolor{phase-scale}{RGB}{255,153,69}
+
+% Hyperliens
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=solana-purple,
+  citecolor=solana-cyan,
+  urlcolor=solana-green,
+  pdfauthor={Money Factory AI Team},
+  pdftitle={Money Factory AI Whitepaper},
+  pdfsubject={Cognitive Activation Protocol},
+  pdfkeywords={MFAI, Web3, AI, DAO, Zyno, Proof-of-Skill}
+}
+
+% Mise en page
+\RequirePackage[a4paper,margin=2.5cm]{geometry}
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{solana-purple}{Money Factory AI™}}
+\fancyhead[R]{\textcolor{solana-purple}{\thepage}}
+
+% Titres
+\RequirePackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{solana-purple}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{solana-green}}{\thesubsection}{1em}{}
+\titleformat{\paragraph}{\bfseries\itshape\color{solana-purple}}{\theparagraph}{1em}{}
+
+% TikZ
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta, shapes, positioning, calc, decorations.pathmorphing}
+\tikzset{
+  mfai-arrow/.style={->, thick, solana-purple, line width=1.5pt},
+  mfai-node/.style={
+    draw=solana-purple,
+    fill=white,
+    text width=3cm,
+    text centered,
+    minimum height=1.5cm,
+    rounded corners=5pt,
+    font=\bfseries\small
+  },
+  step/.style={
+    draw=solana-purple,
+    fill=solana-purple!10,
+    text centered,
+    minimum height=1.2cm,
+    minimum width=3.5cm,
+    font=\bfseries
+  }
+}
+
+% Boîtes avec FontAwesome
+\RequirePackage{fontawesome5}
+\RequirePackage[most]{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\newtcolorbox{mfai-box}[2]{enhanced, breakable,
+  colback=bg-box,
+  colframe=solana-purple,
+  coltitle=white,
+  title={\textcolor{white}{%
+    \ifthenelse{\equal{#2}{}}{#1}{\ifthenelse{\equal{#2}{none}}{#1}{\faIcon{#2}\quad #1}}}},
+  fonttitle=\bfseries\large,
+  boxed title style={colback=solana-purple, sharp corners},
+  arc=2mm,
+  boxrule=0.5pt,
+  before skip=10pt,
+  after skip=10pt
+}
+
+\newtcolorbox{mfai-note}{enhanced, breakable,
+  colback=solana-green!5,
+  colframe=solana-green!70!black,
+  title=\faInfoCircle\quad Note,
+  fonttitle=\bfseries,
+  arc=2mm,
+  boxrule=0.5pt,
+}
+
+\newtcolorbox{mfai-warning}{enhanced, breakable,
+  colback=red!5,
+  colframe=red!70!black,
+  title=\faExclamationTriangle\quad Warning,
+  fonttitle=\bfseries,
+  arc=2mm,
+  boxrule=0.6pt,
+}
+
+% Boîtes par phase
+\newtcolorbox{mfai-phase}[1]{enhanced, breakable,
+  colback=solana-purple!3,
+  colframe=solana-purple,
+  coltitle=white,
+  title=\textcolor{white}{\faBolt\quad Protocol Phase: #1},
+  fonttitle=\bfseries\large,
+  boxed title style={colback=solana-purple},
+  arc=2mm,
+  boxrule=0.6pt,
+}
+
+% Boîtes spécifiques aux étapes du protocole
+\newtcolorbox{mfai-box-learn}[2]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=solana-green,
+  arc=0mm,
+  boxrule=1pt,
+  leftrule=3pt,
+  left=5mm,
+  right=5mm,
+  top=5mm,
+  bottom=5mm,
+  before skip=10pt,
+  after skip=10pt,
+  fontupper=\normalsize,
+  title={\faIcon{#2} \textbf{#1}},
+  attach title to upper,
+  coltitle=solana-green,
+  title style={font=\bfseries},
+  before upper={\hyphenpenalty=10000},
+  before title={\hyphenpenalty=10000}
+}
+
+\newtcolorbox{mfai-box-build}[2]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=solana-cyan,
+  arc=0mm,
+  boxrule=1pt,
+  leftrule=3pt,
+  left=5mm,
+  right=5mm,
+  top=5mm,
+  bottom=5mm,
+  before skip=10pt,
+  after skip=10pt,
+  fontupper=\normalsize,
+  title={\faIcon{#2} \textbf{#1}},
+  attach title to upper,
+  coltitle=solana-cyan,
+  title style={font=\bfseries},
+  before upper={\hyphenpenalty=10000},
+  before title={\hyphenpenalty=10000}
+}
+
+\newtcolorbox{mfai-box-activate}[2]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=solana-red,
+  arc=0mm,
+  boxrule=1pt,
+  leftrule=3pt,
+  left=5mm,
+  right=5mm,
+  top=5mm,
+  bottom=5mm,
+  before skip=10pt,
+  after skip=10pt,
+  fontupper=\normalsize,
+  title={\faIcon{#2} \textbf{#1}},
+  attach title to upper,
+  coltitle=solana-red,
+  title style={font=\bfseries},
+  before upper={\hyphenpenalty=10000},
+  before title={\hyphenpenalty=10000}
+}
+
+\newtcolorbox{mfai-box-scale}[2]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=solana-purple,
+  arc=0mm,
+  boxrule=1pt,
+  leftrule=3pt,
+  left=5mm,
+  right=5mm,
+  top=5mm,
+  bottom=5mm,
+  before skip=10pt,
+  after skip=10pt,
+  fontupper=\normalsize,
+  title={\faIcon{#2} \textbf{#1}},
+  attach title to upper,
+  coltitle=solana-purple,
+  title style={font=\bfseries},
+  before upper={\hyphenpenalty=10000},
+  before title={\hyphenpenalty=10000}
+}
+
+% Tableaux
+\RequirePackage{tabularray}
+\NewTblrTheme{mfai}{
+  hlines = {solid},
+  vlines = {solid},
+  row{odd} = {bg=solana-purple!3},
+  row{even} = {bg=solana-green!5},
+  cell{1} = {font=\bfseries\color{solana-purple}},
+  column{1} = {font=\bfseries},
+  width = \linewidth,
+}
+
+% Commandes de mise en valeur
+\newcommand{\mfaihighlight}[1]{\textcolor{solana-cyan}{\textbf{#1}}}
+\newcommand{\mfaiproof}[1]{\textcolor{solana-yellow}{\textbf{#1}}}
+\newcommand{\mfaiprotocol}[1]{\textcolor{solana-purple}{\textbf{#1}}}
+\newcommand{\mfaiconcept}[1]{\textcolor{solana-green!70!black}{\textbf{#1}™}}
+\newcommand{\mfaistep}[1]{\textcolor{solana-purple!80!black}{\textbf{#1}}}
+
+% Commandes phases
+\newcommand{\mfailearn}[1]{\textcolor{phase-learn}{\textbf{#1}}}
+\newcommand{\mfaibuild}[1]{\textcolor{phase-build}{\textbf{#1}}}
+\newcommand{\mfaiprove}[1]{\textcolor{phase-prove}{\textbf{#1}}}
+\newcommand{\mfaiactivate}[1]{\textcolor{phase-activate}{\textbf{#1}}}
+\newcommand{\mfaiscale}[1]{\textcolor{phase-scale}{\textbf{#1}}}
+
+% Citation stylisée
+\newcommand{\mfaithink}[1]{%
+  \begin{center}
+    \vspace{0.3em}
+    \textit{\color{solana-green} ``#1''}
+    \vspace{0.3em}
+  \end{center}
+}
+
+% Surlignage doux
+\RequirePackage{soul}
+\sethlcolor{solana-lightpurple!40}
+
+% Fin
+\endinput
