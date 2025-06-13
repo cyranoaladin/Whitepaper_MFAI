@@ -1,0 +1,51 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Executive Manifesto}{4}{section.1}%
+\contentsline {section}{\numberline {2}Vision \& Mission}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Mission of the Cognitive Activation Protocol}{12}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Why Now? The Convergence of Web3, AI, and the Sovereignty Gap}{13}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Zyno \& Intelligence AEPO/AECO}{16}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Zyno, the AI Co-Founder\texttrademark }{16}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}AEPO and AECO: The Dual Protocol Intelligence}{17}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Adaptive Interfaces for Each Protocol Phase}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}On-Chain Integration and Meritocratic Co-Evolution}{20}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}A Concrete Case: Zyno in Action}{23}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Conclusion: Sovereign Intelligence}{24}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Protocol Architecture}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Overview}{25}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Layered Architecture}{25}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Modularity and Composability}{28}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Proof Mechanisms \& Credentialing}{32}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Why Proofs Matter}{32}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Proof-of-Skill\texttrademark }{33}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Proof-of-Vision\texttrademark }{35}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Proof Pass\texttrademark }{36}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Neuro-Dividends\texttrademark }{37}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}From Learning to Earning: The Activation Loop}{39}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Tokenomics \& The MFAI Utility Model}{42}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Token Philosophy}{42}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Use Cases}{42}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Sustainability Mechanisms}{42}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Token Allocation \& Vesting}{43}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Economic Trajectory}{43}{subsection.6.5}%
+\contentsline {section}{\numberline {7}DAO \& Synaptic Governance}{43}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Governance Philosophy}{44}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}The Synaptic Model}{44}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Governance Layers}{44}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Voting Mechanism and Participation}{44}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Cognitive Passes \& Subscription Model}{45}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Three Levels of Access}{45}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Utility \& Rewards}{45}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Upgrade \& Dynamic Features}{46}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Gamification \& Loyalty Mechanics}{46}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Roadmap \& Deployment Phases}{46}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Vision-Driven Deployment}{47}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Protocol Activation Timeline}{47}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Ethics, Cognitive Sovereignty \& Antifragility}{48}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Ethics by Design}{49}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Cognitive Sovereignty}{49}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Antifragile by Nature}{49}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Conclusion \& Call to Activation}{50}{section.11}%
+\contentsline {section}{\numberline {12}Core Contributors \& Progressive Decentralization}{51}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Founding Team}{52}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Guided by Protocol, Not Personality}{52}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Transition to DAO Governance}{53}{subsection.12.3}%

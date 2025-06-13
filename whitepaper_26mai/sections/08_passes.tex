@@ -1,0 +1,70 @@
+% ==============================================================================
+% SECTION 08 — Cognitive Passes & Subscription Model
+% ==============================================================================
+
+\section{Cognitive Passes \& Subscription Model}
+
+\subsection{Three Levels of Access}
+Money Factory AI's \mfaiconcept{Cognitive Passes} are dynamic, on-chain activation identifiers that determine each member's access, engagement, and evolution within the protocol. There are three progressive levels:\\
+\textbf{Gold:} Entry-level access to core modules (Zyno Basic, Academy, DAO participation), simplified staking, and eligibility for community rewards.\\
+\textbf{Platinum:} Unlocks Zyno coaching, priority on DAO proposals, and the ability to review \mfaiproof{Proof-of-Vision} submissions.\\
+\textbf{Diamond:} Grants mentorship privileges, access to incubation programs, extended DAO rights, and early entry to the Launchpad.
+
+\subsection{Utility \& Rewards}
+Each Pass is both a cognitive identifier and a merit revealer:\\
+- Unlocks protocol modules and features according to level.\\
+- Enables staking for rewards and governance influence.\\
+- Higher tiers gain access to coaching, mentorship, and privileged governance roles.\\
+- \mfaistep{Community rewards}, \mfaistep{priority access}, and \mfaistep{exclusive events} are distributed based on Pass status and engagement.
+
+\subsection{Upgrade \& Dynamic Features}
+\mfaiconcept{Cognitive Passes} are designed to evolve:\\
+- Members can upgrade their Pass via \mfaiproof{Proof-of-Skill}, staking, or active DAO contributions.\\
+- Upgrading triggers a burn/reward mechanism, reinforcing scarcity and merit.\\
+- \mfaistep{Quests}, \mfaistep{challenges}, and \mfaistep{community events} are directly linked to Pass evolution and unlocks.
+
+\subsection{Gamification \& Loyalty Mechanics}
+The protocol weaves gamification into its access model:\\
+- \mfaistep{Progression} is narrative and participatory, not transactional.\\
+- \mfaistep{Loyalty} is rewarded through engagement, not just holding.\\
+- \mfaistep{Dynamic upgrades} and \mfaistep{community quests} foster a sense of belonging and achievement.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=4cm,y=2.2cm,
+  pass/.style={rectangle,draw=solana-purple,fill=solana-light,thick,minimum width=2.5cm,minimum height=1cm,rounded corners},
+  upgrade/.style={->,thick,draw=solana-green},
+  module/.style={rectangle,draw=solana-cyan,fill=solana-light,thick,rounded corners,minimum width=2.2cm,minimum height=0.8cm},
+  quest/.style={dashed,thick,draw=solana-yellow}]
+
+% Pass pyramid
+\node[pass] (gold) at (0,0) {Gold};
+\node[pass] (platinum) at (0,1.2) {Platinum};
+\node[pass] (diamond) at (0,2.4) {Diamond};
+
+% Upgrade arrows
+\draw[upgrade] (gold) -- (platinum);
+\draw[upgrade] (platinum) -- (diamond);
+
+% Modules
+\node[module, right=1.9cm of gold] (dao) {DAO};
+\node[module, right=1.9cm of platinum] (academy) {Academy};
+\node[module, right=1.9cm of diamond] (zyno) {Zyno Pro};
+\node[module, above right=0.7cm and 1.5cm of diamond] (launchpad) {Launchpad};
+
+% Connections from passes to modules
+\draw[->,thick,draw=solana-cyan] (gold) -- (dao);
+\draw[->,thick,draw=solana-cyan] (platinum) -- (academy);
+\draw[->,thick,draw=solana-cyan] (diamond) -- (zyno);
+\draw[->,thick,draw=solana-cyan] (diamond) -- (launchpad);
+
+% Quests/challenges
+\draw[quest] (gold) ++(-0.9,-0.4) -- (gold);
+\draw[quest] (platinum) ++(-0.9,0) -- (platinum);
+\draw[quest] (diamond) ++(-0.9,0.4) -- (diamond);
+
+\end{tikzpicture}
+\caption{Cognitive Pass Evolution Model: dynamic upgrades, module access, and engagement pathways.}
+\end{figure}
+
+\footnotetext{For technical readers: Passes are implemented as dynamic on-chain assets (NFTs) but are always referred to as Cognitive Passes or Activation Identifiers in the main text.}

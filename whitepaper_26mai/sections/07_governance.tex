@@ -1,0 +1,47 @@
+% ==============================================================================
+% SECTION 07 — DAO & Synaptic Governance
+% ==============================================================================
+
+\section{DAO \& Synaptic Governance}
+
+\subsection{Governance Philosophy}
+Money Factory AI is founded on the conviction that governance must transcend centralized, opaque, and rent-seeking models. \mfaiconcept{Synaptic Governance} replaces the paradigm of "1 token = 1 vote" with a meritocratic, transparent, and collaborative process. Here, those who build, validate, and activate the protocol are empowered to govern it.
+
+\subsection{The Synaptic Model}
+At the heart of \mfaiconcept{Synaptic Governance} is on-chain reputation. Voting power is dynamically weighted by the sum of verifiable proofs—\mfaiproof{Proof-of-Skill}, \mfaiproof{Proof-of-Vision}, and \mfaiproof{Proof-of-Contribution}—earned by each member. The protocol’s AI, Zyno, augments governance by facilitating proposal drafting, surfacing insights, and supporting structured decision-making. Members can delegate their voting power in a guided way (\textit{delegate-to-augment}), leveraging both human and AI expertise.
+
+\subsection{Governance Layers}
+\textbf{Operational Layer:} Module upgrades, rule changes, and protocol evolution are handled here, with rapid iteration and broad contributor input.\\
+\textbf{Strategic Layer:} Tokenomics, new protocol launches, and long-term vision are debated and decided at this level.\\
+\textbf{Community Layer:} Influence votes, onboarding of new members, and incubation of projects are governed by the community, ensuring inclusivity and continuous renewal.
+
+\subsection{Voting Mechanism and Participation}
+Governance in Money Factory AI is hybrid and multidimensional. To submit or prioritize proposals, members must stake $MFAI. Voting power is calculated from a composite score: $MFAI holdings, on-chain reputation, and achievements in the \mfaiconcept{Proof Pass}. This ensures that both capital and merit drive decision-making, preventing plutocracy and fostering a vibrant, skilled DAO.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=2.2cm,y=1.5cm, neuron/.style={circle,draw=solana-purple,fill=solana-light,thick,minimum size=1.2cm}, proof/.style={->,thick,draw=solana-green}, decision/.style={rectangle,draw=solana-cyan,fill=solana-light,rounded corners,minimum width=2.5cm,minimum height=1cm,thick}]
+% Neurons (members)
+
+\node[neuron] (n1) {Member 1};
+\node[neuron, right=1.5cm of n1] (n2) {Member 2};
+\node[neuron, below=1.2cm of n1] (n3) {Member 3};
+\node[neuron, right=1.5cm of n3] (n4) {Member 4};
+
+% Proofs as impulses
+\draw[proof] (n1) -- node[above,sloped]{\mfaiproof{Skill}} (n2);
+\draw[proof] (n3) -- node[below,sloped]{\mfaiproof{Vision}} (n4);
+\draw[proof] (n2) -- node[right]{\mfaiproof{Contribution}} (n4);
+
+% Decision output
+\node[decision, right=1.5cm of n2] (d1) {Collective Decision};
+\draw[->,thick,draw=solana-purple] (n2) -- (d1);
+\draw[->,thick,draw=solana-purple] (n4) -- (d1);
+
+% Zyno AI as facilitator
+\node[rectangle,draw=solana-yellow,fill=solana-light,rounded corners,thick,minimum width=1.8cm,minimum height=0.8cm,above right=0.5cm and -0.8cm of n2] (zyno) {\textbf{Zyno AI}};
+\draw[->,dashed,thick,draw=solana-yellow] (zyno) -- (d1);
+
+\end{tikzpicture}
+\caption{Synaptic Governance Framework: decentralized, proof-based, and AI-augmented decision-making.}
+\end{figure}

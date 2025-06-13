@@ -1,0 +1,40 @@
+\begin{center}
+  \begin{tikzpicture}[
+    node distance=1.8cm and 2.1cm,
+    mfnode/.style={
+      draw=solana-purple,
+      fill=solana-purple!10,
+      text centered,
+      minimum height=1.2cm,
+      text width=3.7cm, % Réduit pour éviter le dépassement de marge
+      font=\bfseries\small,
+      rounded corners=4pt
+    },
+    mfarrow/.style={
+      ->,
+      thick,
+      color=solana-purple
+    }
+  ]
+  
+  % Ligne 1
+  \node[mfnode] (learn) {Learn\\\scriptsize{Skillchain Mining™}};
+  \node[mfnode, right=of learn] (prove) {Prove\\\scriptsize{Proof-of-Skill Tokens™}};
+  \node[mfnode, right=of prove] (tokenize) {Tokenize\\\scriptsize{AI + Certification}};
+  
+  % Ligne 2
+  \node[mfnode, below=2.5cm of learn] (earn) {Earn\\\scriptsize{Neuro-Dividends™}};
+  \node[mfnode, right=of earn] (govern) {Govern\\\scriptsize{Synaptic Governance™}};
+  \node[mfnode, right=of govern] (build) {Build\\\scriptsize{Project Launch}};
+  
+  % Flèches
+  \draw[mfarrow] (learn) -- (prove);
+  \draw[mfarrow] (prove) -- (tokenize);
+  \draw[mfarrow] (tokenize.south) -- (build.north);
+  \draw[mfarrow] (build) -- (govern);
+  \draw[mfarrow] (govern) -- (earn);
+  \draw[mfarrow] (earn.north) -- (learn.south);
+  
+  \end{tikzpicture}
+  \end{center}
+  

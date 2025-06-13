@@ -1,0 +1,73 @@
+% 09_burn_buyback_economy.tex - Version mise à jour
+
+\section{Burn \& Buyback Economy}
+
+\begin{mfai-box}{Economy Overview}{fire}
+The \mfaiprotocol{Burn \& Buyback Economy} is a sophisticated mechanism that creates sustainable token value through controlled supply reduction and strategic market operations.
+\end{mfai-box}
+
+\subsection{Core Mechanisms}
+
+\begin{mfai-box-learn}{Key Economic Mechanisms}{cogs}
+The \mfaiprotocol{Burn \& Buyback Economy} implements multiple mechanisms to ensure long-term token value stability and growth.
+\end{mfai-box-learn}
+
+Key mechanisms include:
+
+\begin{itemize}[leftmargin=*]
+\item \mfaihighlight{Token Burning}: Permanent supply reduction
+\item \mfaihighlight{Market Buybacks}: Strategic token acquisition
+\item \mfaihighlight{Value Recycling}: Protocol revenue utilization
+\item \mfaihighlight{Supply Control}: Dynamic emission adjustment
+\item \mfaihighlight{Market Stability}: Price equilibrium maintenance
+\end{itemize}
+
+\subsection{Burn Mechanism}
+
+\begin{mfai-box-build}{Burn System Overview}{fire-alt}
+The burn mechanism permanently removes tokens from circulation, creating deflationary pressure and increasing token scarcity.
+\end{mfai-box-build}
+
+Burn features:
+
+\begin{itemize}[leftmargin=*]
+\item \mfaihighlight{Protocol Fees}: Automatic burning of collected fees
+\item \mfaihighlight{Transaction Burns}: Partial burn of transaction fees
+\item \mfaihighlight{Performance Burns}: Additional burns based on metrics
+\item \mfaihighlight{Community Burns}: Builder-initiated burn events
+\item \mfaihighlight{Transparency}: Public burn verification
+\end{itemize}
+
+\subsection{Buyback Program}
+
+\begin{mfai-box-prove}{Buyback System Overview}{chart-line}
+The buyback program strategically acquires tokens from the market to support price stability and create value for \mfaibuilder{builders}.
+\end{mfai-box-prove}
+
+Program components:
+
+\begin{itemize}[leftmargin=*]
+\item \mfaihighlight{Market Operations}: Strategic token purchases
+\item \mfaihighlight{Price Support}: Market stability maintenance
+\item \mfaihighlight{Value Creation}: Builder benefit generation
+\item \mfaihighlight{Transparency}: Public operation reporting
+\item \mfaihighlight{Automation}: Smart contract execution
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}
+    \node[mfai-node] (revenue) at (0,0) {\mfaiprotocol{Revenue}\\\textcolor{solana-green}{Protocol Income}};
+    \node[mfai-node] (burn) at (4,0) {\mfaiprotocol{Burn}\\\textcolor{solana-cyan}{Supply Reduction}};
+    \node[mfai-node] (buyback) at (8,0) {\mfaiprotocol{Buyback}\\\textcolor{solana-purple}{Value Creation}};
+
+    \draw[mfai-arrow] (revenue) -- (burn);
+    \draw[mfai-arrow] (revenue) -- (buyback);
+    \draw[mfai-arrow] (burn) to[bend left=45] (buyback);
+\end{tikzpicture}
+\end{center}
+
+\begin{mfai-box-scale}{Future Development}{rocket}
+The \mfaiprotocol{Burn \& Buyback Economy} is continuously evolving to incorporate new mechanisms and strategies that enhance token value and \mfaibuilder{builder} benefits. Our team is committed to developing innovative economic solutions that ensure long-term protocol sustainability.
+\end{mfai-box-scale}
+
+\newpage 

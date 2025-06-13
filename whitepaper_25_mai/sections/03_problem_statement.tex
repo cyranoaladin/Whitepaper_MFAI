@@ -1,0 +1,55 @@
+\section{Problem Statement}
+
+\begin{mfai-box}{The Cognitive Value Gap}{exclamation-circle}
+There is a growing disconnect between individual cognitive capital — skills, ideas, contributions — and the mechanisms of recognition, reward, and ownership in today's economy. Web2 platforms extract this value without granting sovereignty. Web3 promises change, but remains fragmented and complex.
+\end{mfai-box}
+
+\vspace{1em}
+
+\subsection*{Three Structural Fractures}
+
+\begin{itemize}
+  \item \mfaiproof{Credential Collapse:} Traditional certifications do not reflect practical, real-world expertise. Peer learning, project contribution, and problem-solving often go unrecognized.
+  \item \mfaiproof{Access Barriers:} Web3 remains inaccessible to most learners and creators. Technical complexity and jargon exclude talent from entering the decentralized economy.
+  \item \mfaiproof{Invisible Contributors:} In DAOs and open-source communities, key contributors often receive little visibility or economic participation. There is no proof layer for their value.
+\end{itemize}
+
+\vspace{1.5em}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.5cm and 1.6cm,
+  problem/.style={
+    draw=solana-red!80,
+    fill=solana-red!10,
+    font=\small\bfseries,
+    text centered,
+    text width=4.0cm,
+    rounded corners=3pt,
+    minimum height=1.2cm
+  }
+]
+
+\node[problem] (edu) {Education-to-Earning Mismatch};
+\node[problem, below left=of edu] (web2) {Web2 Value Extraction};
+\node[problem, below right=of edu] (web3) {Web3 Complexity Gap};
+\node[problem, below=of edu] (noProof) {No Verifiable\\Proof-of-Contribution};
+
+\draw[->, thick, color=solana-red] (edu) -- (noProof);
+\draw[->, thick, color=solana-red] (web2) -- (noProof);
+\draw[->, thick, color=solana-red] (web3) -- (noProof);
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{1.5em}
+
+\begin{mfai-warning}
+Unless we bridge these fractures, billions in cognitive value will remain untapped — while builders struggle to prove, own, and activate their expertise in the Web3 age.
+\end{mfai-warning}
+
+\vspace{1em}
+
+\begin{mfai-note}
+\textbf{MFAI proposes a different model:} one where skills are mined, validated, tokenized, and governed — on-chain.
+\end{mfai-note}

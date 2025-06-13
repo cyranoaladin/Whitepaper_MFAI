@@ -1,0 +1,187 @@
+% =============================================================================
+% Money Factory AI — Activation Guide Style v3.2 (TikZ Fixed)
+% =============================================================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mfai}[2025/05/25 MFAI Activation Guide Style v3.2]
+
+% --- Encodage, police, interligne ---
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% --- Couleurs principales (palette Solana) ---
+\RequirePackage{xcolor}
+\definecolor{solana-purple}{HTML}{9945FF}
+\definecolor{solana-green}{HTML}{14F195}
+\definecolor{solana-cyan}{HTML}{03E1FF}
+\definecolor{solana-red}{HTML}{FF5757}
+\definecolor{solana-yellow}{HTML}{FFB800}
+\definecolor{solana-light}{HTML}{E8DFFF}
+\definecolor{bg-box}{HTML}{F3F0FF}
+\definecolor{bg-secondary}{HTML}{EEF9F1}
+\definecolor{text-primary}{HTML}{1A1A1A}
+\definecolor{text-secondary}{HTML}{666666}
+
+% --- Liens & Hyperréférences ---
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=solana-purple,
+  urlcolor=solana-green,
+  citecolor=solana-cyan,
+  pdfauthor={Money Factory AI Team},
+  pdftitle={MFAI Activation Guide v2.0},
+  pdfsubject={From Skillchains to Sovereignty},
+  pdfkeywords={MFAI, Web3, AI, Protocol, Activation, Sovereignty}
+}
+
+% --- Mise en page ---
+\RequirePackage[a4paper,margin=2.5cm]{geometry}
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{solana-purple}{Money Factory AI™}}
+\fancyhead[R]{\textcolor{solana-purple}{\thepage}}
+
+% --- Titres section / sous-section ---
+\RequirePackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{solana-purple}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{solana-green}}{\thesubsection}{1em}{}
+\titleformat{\paragraph}{\bfseries\itshape\color{solana-purple}}{\theparagraph}{1em}{}
+
+% --- TikZ ---
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta, shapes, positioning, calc, decorations.pathmorphing}
+
+% TikZ Styles
+\tikzset{
+  step/.style={
+    draw=solana-purple,
+    fill=solana-purple!10,
+    text centered,
+    minimum height=1.2cm,
+    minimum width=3.5cm,
+    font=\bfseries
+  },
+  mfai-node/.style={
+    draw=solana-purple, 
+    fill=white, 
+    text width=3cm,
+    text centered, 
+    minimum height=1.5cm, 
+    rounded corners=5pt,
+    font=\bfseries\small
+  },
+  mfai-arrow/.style={
+    ->, 
+    thick, 
+    color=solana-purple
+  }
+}
+
+% --- Icônes et boîtes ---
+\RequirePackage{fontawesome5}
+\RequirePackage[most]{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% Boîte générique avec icône
+\newtcolorbox{mfai-box}[2]{enhanced, breakable,
+  colback=bg-box,
+  colframe=solana-purple,
+  coltitle=white,
+  title=\textcolor{white}{\faIcon{#2}\quad #1},
+  fonttitle=\bfseries\large,
+  leftrule=1mm,
+  toprule=0.8mm,
+  arc=2mm,
+  boxrule=0.4pt,
+  boxed title style={colback=solana-purple, sharp corners}
+}
+
+% Boîte note
+\newtcolorbox{mfai-note}{enhanced, breakable,
+  colback=solana-green!5,
+  colframe=solana-green!70!black,
+  coltitle=solana-green!90!black,
+  title=\faInfoCircle\quad Note,
+  fonttitle=\bfseries,
+  arc=2mm,
+  boxrule=0.5pt,
+}
+
+% Boîte alerte
+\newtcolorbox{mfai-warning}{enhanced, breakable,
+  colback=red!5,
+  colframe=red!70!black,
+  coltitle=red!80!black,
+  title=\faExclamationTriangle\quad Warning,
+  fonttitle=\bfseries,
+  arc=2mm,
+  boxrule=0.6pt,
+}
+
+% Boîte phase du protocole
+\newtcolorbox{mfai-phase}[1]{enhanced, breakable,
+  colback=solana-purple!3,
+  colframe=solana-purple,
+  coltitle=white,
+  title=\textcolor{white}{\faBolt\quad Protocol Phase: #1},
+  fonttitle=\bfseries\large,
+  boxed title style={colback=solana-purple},
+  arc=2mm,
+  boxrule=0.6pt,
+}
+
+% --- Tableaux (tabularray) ---
+\RequirePackage{tabularray}
+\NewTblrTheme{mfai}{
+  hlines = {solid},
+  vlines = {solid},
+  row{odd} = {bg=solana-purple!3},
+  row{even} = {bg=solana-green!5},
+  cell{1} = {font=\bfseries\color{solana-purple}},
+  column{1} = {font=\bfseries},
+  width = \linewidth,
+}
+
+% --- Listes personnalisées ---
+\RequirePackage{enumitem}
+\setlist[itemize]{topsep=0pt, left=1.5em, label=\faCheckCircle, itemsep=0.3em}
+\setlist[enumerate]{left=1.5em, itemsep=0.3em}
+
+% --- Graphiques / images / légendes ---
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage[labelfont=bf,labelsep=period]{caption}
+\captionsetup{font=small}
+
+% --- Mathématiques ---
+\RequirePackage{amsmath,amssymb}
+
+% --- Mots-clés stylisés ---
+\newcommand{\mfaiproof}[1]{\textcolor{solana-yellow}{\textbf{#1}}}
+\newcommand{\mfaihighlight}[1]{\textcolor{solana-cyan}{\textbf{#1}}}
+\newcommand{\mfaiword}[1]{\textcolor{solana-green!70!black}{\textbf{#1}}}
+\newcommand{\mfaiicon}[1]{\textcolor{solana-purple}{\faIcon{#1}}}
+
+% --- Citation stylisée ---
+\newcommand{\mfaithink}[1]{%
+  \begin{center}
+    \vspace{0.3em}
+    \textit{\color{solana-green} ``#1''}
+    \vspace{0.3em}
+  \end{center}
+}
+
+% --- Surlignage doux ---
+\RequirePackage{soul}
+\sethlcolor{solana-purple!10}
+
+% Fin du package
+\endinput

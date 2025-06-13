@@ -1,0 +1,81 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+.rule-type: Auto Attached
+
+.file-patterns:
+main.tex, mfai.sty, sections/*.tex
+
+.description:
+Money Factory AI — Full Protocol Narrative & LaTeX Structuring Rules  
+This rule ensures every part of the whitepaper follows the official narrative, terminology, formatting and structuring rules of the MFAI project.
+
+.rules:
+
+# 📚 General Narrative
+- This is not a platform. It is a **living Web3 protocol**. Always say “protocol”, not “platform”.
+- Always use: **“The Cognitive Activation Protocol™”** in full where relevant.
+- Mention that we are in **pre-TGE phase** and the protocol is **under construction** by a dedicated team.
+- The protocol enables builders to go from **skill to sovereignty** through proof-based activation.
+- Never use the term "user". Always replace with “builder”, “sovereign actor”, or “entrepreneur”.
+- Each section must reflect our mission to train, certify and launch post-Web2 entrepreneurs.
+- Avoid all references to NFT unless strictly necessary — use “Proof-of-Skill Token™”, “Pass”, or “verifiable credential” instead.
+
+# 🔀 Terminology Table (Mandatory)
+| ❌ Forbidden | ✅ Replace with |
+|-------------|----------------|
+| user        | builder / actor / entrepreneur |
+| NFT         | Proof-of-Skill Token™ / Pass™ |
+| DAO         | Synaptic Governance™ |
+| staking     | Cognitive Lock™ |
+| certificate | Proof-of-Skill™ |
+| assistant   | AI Co-Founder™ |
+| edtech      | cognitive protocol |
+| airdrop     | Neuro-Dividends™ |
+
+All custom concepts must be introduced with `™` at first mention in each section.
+
+# 🧱 Whitepaper Structure (Required Order)
+1. Executive Summary  
+2. Problem Statement  
+3. Vision & Narrative  
+4. Cognitive Activation Protocol™ (5+1 loop)  
+5. Zyno AI Co-Founder™ (AEPO™, AECO™, RAG-Gov™, Zyno Pro™)  
+6. Proof Systems (Proof-of-Skill™, Proof-of-Vision™, Proof Pass™)  
+7. Synaptic Governance™  
+8. $MFAI Token Utility  
+9. Burn / Buyback / Circular Economy  
+10. Business Model  
+11. Roadmap  
+12. Team, Legal, Disclaimer  
+13. Glossary
+
+# ✍️ Writing Style & Voice
+- Prefer short, precise, active-voice sentences.
+- Prioritize clarity and progressivity (each section must logically build on the previous).
+- Avoid full-caps and aggressive styles.
+- Use `\textbf{}`, `\textit{}` meaningfully (no style flooding).
+- Each concept must be defined before use via a `\begin{mfai-box}` when appropriate.
+
+# 🎨 Layout & Code Styling
+- All diagrams use TikZ. Keep symmetry, label all nodes clearly.
+- Use gradient colors from Solana palette:
+    - `solana-purple`: #9945FF
+    - `solana-green`: #14F195
+- Apply alternated tones to boxes when showing protocol phases (Learn, Build, Prove, Activate, Scale).
+- Use `\begin{mfai-box}[Definition: Term]{icon}` to define each MFAI concept.
+
+# 🧾 LaTeX Structure Rules
+- main.tex compiles sections/*.tex
+- mfai.sty holds all colors, boxes, commands
+- Always use:
+```latex
+\usepackage{tikz}
+\usepackage{tabularray}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{hyperref}

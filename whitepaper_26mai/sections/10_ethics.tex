@@ -1,0 +1,35 @@
+% ==============================================================================
+% SECTION 10 — Ethics, Cognitive Sovereignty & Antifragility
+% ==============================================================================
+
+\section{Ethics, Cognitive Sovereignty \& Antifragility}
+
+\subsection{Ethics by Design}
+Money Factory AI is not a neutral protocol: it is architected with \mfaithink{positive biases}—meritocracy, transparency, equal access, and talent support—woven into its code. The project rejects the "big data → AI → extraction" paradigm. Instead, \mfaiconcept{AEPO} and \mfaiconcept{AECO} are designed as agents of activation, not replacement, ensuring that AI augments rather than exploits human potential.
+
+\subsection{Cognitive Sovereignty}
+Money Factory AI affirms the right of every individual to control their \mfaiconcept{digital identity}, learning journey, proofs, and dividends. The \mfaiconcept{Cognitive Pass} is not just access—it is a right to code one’s own trajectory. Zyno is positioned not as an intelligence above, but \mfaithink{beside} the user: a strategic cofounder, not a master.
+
+\subsection{Antifragile by Nature}
+The protocol’s \mfaiconcept{governance} is distributed, eliminating single points of failure. Its modular design ensures that each component can evolve, thrive, or sunset without endangering the whole. The ecosystem learns from its own tensions and mistakes, with on-chain feedback and DAO-driven updates. Like learning itself, the system grows stronger through stress, embodying true \mfaithink{antifragility}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.15, every node/.style={font=\sffamily},
+  ethic/.style={circle,draw=solana-purple,fill=solana-light,thick,minimum size=2.2cm},
+  link/.style={->,thick,draw=solana-green}]
+% Triangle of principles
+  \node[ethic] (ethics) at (90:2.8) {\mfaiconcept{Ethics}};
+  \node[ethic] (sovereignty) at (210:2.8) {\mfaiconcept{Sovereignty}};
+  \node[ethic] (antifragility) at (330:2.8) {\mfaiconcept{Antifragility}};
+
+% Links (circular)
+  \draw[link] (ethics) -- (sovereignty);
+  \draw[link] (sovereignty) -- (antifragility);
+  \draw[link] (antifragility) -- (ethics);
+
+% Central idea
+  \node[align=center, font=\bfseries\large, text=solana-purple] at (0,0) {\textit{\color{solana-green} Human Autonomy}\\\mfaistep{Resilience by Design}};
+\end{tikzpicture}
+\caption{The Ethical Framework of Money Factory AI: ethics, sovereignty, and antifragility as mutually reinforcing pillars.}
+\end{figure}

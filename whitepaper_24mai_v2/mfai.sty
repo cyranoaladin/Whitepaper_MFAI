@@ -1,0 +1,113 @@
+% =============================================================================
+% M F A I  -  S T Y L E   P A C K A G E  (Updated)
+% =============================================================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mfai}[2025/05/25 M.F.A.I Style v3 — Gradient-Safe Icons + Contrast]
+
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{fontawesome5}
+\RequirePackage{tikz}
+\RequirePackage{tabularray}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+
+% -------------------- Colors --------------------
+\definecolor{solana-purple}{HTML}{9945FF}
+\definecolor{solana-green}{HTML}{14F195}
+\definecolor{bg-box}{HTML}{F3F0FF}
+\definecolor{bg-secondary}{HTML}{EEF9F1}
+\definecolor{text-primary}{HTML}{1A1A1A}
+\definecolor{text-secondary}{HTML}{666666}
+
+% -------------------- Typography --------------------
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% -------------------- Sections --------------------
+\titleformat{\section}{\Large\bfseries\color{solana-purple}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{solana-green}}{\thesubsection}{1em}{}
+\titleformat{\paragraph}{\bfseries\itshape\color{solana-purple}}{\theparagraph}{1em}{}
+
+% -------------------- Boxes --------------------
+\newtcolorbox{mfai-box}[2]{enhanced, breakable,
+  colback=bg-box,
+  colframe=solana-purple,
+  coltitle=white,
+  title=\textcolor{white}{\faIcon{#2}\quad #1},
+  fonttitle=\bfseries\large,
+  leftrule=1mm,
+  toprule=0.8mm,
+  arc=2mm,
+  boxrule=0.4pt,
+  boxed title style={colback=solana-purple, sharp corners}
+}
+
+\newtcolorbox{mfai-note}{enhanced, breakable,
+  colback=solana-green!5,
+  colframe=solana-green!70!black,
+  coltitle=solana-green!90!black,
+  title=\faInfoCircle\quad Note,
+  fonttitle=\bfseries,
+  arc=2mm,
+  boxrule=0.5pt,
+}
+
+\newtcolorbox{mfai-warning}{enhanced, breakable,
+  colback=red!5,
+  colframe=red!70!black,
+  coltitle=red!80!black,
+  title=\faExclamationTriangle\quad Warning,
+  fonttitle=\bfseries,
+  arc=2mm,
+  boxrule=0.6pt,
+}
+
+\newtcolorbox{mfai-phase}[1]{enhanced, breakable,
+  colback=solana-purple!3,
+  colframe=solana-purple,
+  coltitle=white,
+  title=\textcolor{white}{\faBolt\quad Protocol Phase: #1},
+  fonttitle=\bfseries\large,
+  boxed title style={colback=solana-purple},
+  arc=2mm,
+  boxrule=0.6pt,
+}
+
+% -------------------- Highlights --------------------
+\newcommand{\mfaithink}[1]{%
+  \begin{center}
+    \vspace{0.3em}
+    \textit{\color{solana-green} ``#1''}
+    \vspace{0.3em}
+  \end{center}
+}
+
+% -------------------- Lists --------------------
+\setlist[itemize]{topsep=0pt, left=1.5em, label=\faCheckCircle, itemsep=0.3em}
+\setlist[enumerate]{left=1.5em, itemsep=0.3em}
+
+% -------------------- Links --------------------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=solana-purple,
+  urlcolor=solana-green,
+  citecolor=solana-purple
+}
+
+% -------------------- Tables --------------------
+\NewTblrTheme{mfai}{
+  hlines = {solid},
+  vlines = {solid},
+  row{odd} = {bg=solana-purple!3},
+  row{even} = {bg=solana-green!5},
+  cell{1} = {font=\bfseries\color{solana-purple}},
+  column{1} = {font=\bfseries},
+  width = \linewidth,
+}

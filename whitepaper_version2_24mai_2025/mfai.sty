@@ -1,0 +1,304 @@
+% mfai.sty - Version mise à jour
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mfai}[2025/05/23 v2.3 Money Factory AI enhanced style]
+
+% Encodage et langues
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[french,english]{babel}
+
+% Police principale (Latin Modern)
+\RequirePackage{lmodern}
+
+% Gestion avancée des couleurs - palette Solana avec dégradés
+\RequirePackage{xcolor}
+\definecolor{solana-purple}{HTML}{9945FF}
+\definecolor{solana-green}{HTML}{14F195}
+\definecolor{solana-cyan}{HTML}{03E1FF}
+\definecolor{solana-red}{HTML}{FF5757}
+\definecolor{solana-yellow}{HTML}{FFB800}
+\definecolor{solana-lightpurple}{RGB}{180,120,255}
+\definecolor{solana-lightcyan}{RGB}{128,255,255}
+\definecolor{solana-lightgreen}{RGB}{100,255,200}
+
+% TikZ et ses bibliothèques
+\RequirePackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,calc,decorations.pathmorphing}
+
+% Dégradés pour les phases du protocole
+\definecolor{phase-learn}{RGB}{153,69,255}    % Purple
+\definecolor{phase-build}{RGB}{20,241,149}    % Green
+\definecolor{phase-prove}{RGB}{0,255,252}     % Cyan
+\definecolor{phase-activate}{RGB}{255,69,153} % Pink
+\definecolor{phase-scale}{RGB}{255,153,69}    % Orange
+
+% Style TikZ pour les flèches et diagrammes
+\tikzstyle{mfai-arrow} = [
+    ->,
+    thick,
+    solana-purple,
+    line width=1.5pt
+]
+
+\tikzstyle{mfai-node} = [
+    draw=solana-purple,
+    fill=white,
+    text width=2.5cm,
+    text centered,
+    minimum height=1.5cm,
+    rounded corners=5pt,
+    font=\bfseries
+]
+
+% Hyperref avec configuration des liens colorés
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=solana-purple,
+    citecolor=solana-cyan,
+    urlcolor=solana-green,
+    pdfauthor={Money Factory AI Team},
+    pdftitle={Money Factory AI Whitepaper v2.3},
+    pdfsubject={Learn Boldly. Build Fearlessly. Own the Future.},
+    pdfkeywords={MFAI, blockchain, Web3, AI, protocol, tokenomics}
+}
+
+% Mise en page et marges
+\RequirePackage[a4paper,margin=2.5cm]{geometry}
+
+% Entêtes et pieds de page
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{solana-purple}{Money Factory AI™}}
+\fancyhead[R]{\textcolor{solana-purple}{\thepage}}
+
+% Titres section / subsection
+\RequirePackage{sectsty}
+\sectionfont{\color{solana-purple}\bfseries\Large}
+\subsectionfont{\color{solana-green}\bfseries\normalsize}
+
+% Tableaux améliorés
+\RequirePackage{booktabs}
+\RequirePackage{tabularray}
+
+% Listes personnalisées
+\RequirePackage{enumitem}
+\setlist[itemize]{noitemsep,topsep=3pt,parsep=0pt,partopsep=0pt}
+
+% Graphiques et images
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage[labelfont=bf,labelsep=period]{caption}
+\captionsetup{font=small}
+
+% Mathématiques
+\RequirePackage{amsmath,amssymb}
+
+% Interligne
+\RequirePackage{setspace}
+\setstretch{1.15}
+
+% Paragraphes
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% Gestion des URLs
+\RequirePackage{url}
+
+% Boîtes MFAI avec dégradés et styles distinctifs
+\RequirePackage[most]{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% Boîte standard MFAI
+\newtcolorbox{mfai-box}[2]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=solana-purple,
+    arc=0mm,
+    boxrule=1pt,
+    leftrule=3pt,
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    before skip=10pt,
+    after skip=10pt,
+    fontupper=\normalsize,
+    title={\faIcon{#2} \textbf{#1}},
+    attach title to upper,
+    coltitle=solana-purple,
+    title style={font=\bfseries},
+    before upper={\hyphenpenalty=10000},
+    before title={\hyphenpenalty=10000}
+}
+
+% Boîte étoilée MFAI (pour les points importants)
+\newtcolorbox{mfai-box-star}[2]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=solana-yellow,
+    arc=0mm,
+    boxrule=1pt,
+    leftrule=3pt,
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    before skip=10pt,
+    after skip=10pt,
+    fontupper=\normalsize,
+    title={\faIcon{#2} \textbf{#1}},
+    attach title to upper,
+    coltitle=solana-yellow,
+    title style={font=\bfseries},
+    before upper={\hyphenpenalty=10000},
+    before title={\hyphenpenalty=10000}
+}
+
+% Boîtes pour les phases du protocole
+\newtcolorbox{mfai-box-learn}[2]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=solana-green,
+    arc=0mm,
+    boxrule=1pt,
+    leftrule=3pt,
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    before skip=10pt,
+    after skip=10pt,
+    fontupper=\normalsize,
+    title={\faIcon{#2} \textbf{#1}},
+    attach title to upper,
+    coltitle=solana-green,
+    title style={font=\bfseries},
+    before upper={\hyphenpenalty=10000},
+    before title={\hyphenpenalty=10000}
+}
+
+\newtcolorbox{mfai-box-build}[2]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=solana-cyan,
+    arc=0mm,
+    boxrule=1pt,
+    leftrule=3pt,
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    before skip=10pt,
+    after skip=10pt,
+    fontupper=\normalsize,
+    title={\faIcon{#2} \textbf{#1}},
+    attach title to upper,
+    coltitle=solana-cyan,
+    title style={font=\bfseries},
+    before upper={\hyphenpenalty=10000},
+    before title={\hyphenpenalty=10000}
+}
+
+\newtcolorbox{mfai-box-prove}[2]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=solana-yellow,
+    arc=0mm,
+    boxrule=1pt,
+    leftrule=3pt,
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    before skip=10pt,
+    after skip=10pt,
+    fontupper=\normalsize,
+    title={\faIcon{#2} \textbf{#1}},
+    attach title to upper,
+    coltitle=solana-yellow,
+    title style={font=\bfseries},
+    before upper={\hyphenpenalty=10000},
+    before title={\hyphenpenalty=10000}
+}
+
+\newtcolorbox{mfai-box-activate}[2]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=solana-red,
+    arc=0mm,
+    boxrule=1pt,
+    leftrule=3pt,
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    before skip=10pt,
+    after skip=10pt,
+    fontupper=\normalsize,
+    title={\faIcon{#2} \textbf{#1}},
+    attach title to upper,
+    coltitle=solana-red,
+    title style={font=\bfseries},
+    before upper={\hyphenpenalty=10000},
+    before title={\hyphenpenalty=10000}
+}
+
+\newtcolorbox{mfai-box-scale}[2]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=solana-purple,
+    arc=0mm,
+    boxrule=1pt,
+    leftrule=3pt,
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    before skip=10pt,
+    after skip=10pt,
+    fontupper=\normalsize,
+    title={\faIcon{#2} \textbf{#1}},
+    attach title to upper,
+    coltitle=solana-purple,
+    title style={font=\bfseries},
+    before upper={\hyphenpenalty=10000},
+    before title={\hyphenpenalty=10000}
+}
+
+% Commandes personnalisées pour les termes du protocole
+\newcommand{\mfai}[1]{\textcolor{solana-purple}{#1}}
+\newcommand{\mfainote}[1]{\footnote{\textcolor{solana-purple}{#1}}}
+\newcommand{\mfaihighlight}[1]{\textcolor{solana-cyan}{\textbf{#1}}}
+\newcommand{\mfaiprotocol}[1]{\textcolor{solana-purple}{\textbf{#1}}}
+\newcommand{\mfaibuilder}[1]{\textcolor{solana-green}{\textbf{#1}}}
+\newcommand{\mfaiconcept}[1]{\textcolor{solana-cyan}{#1}™}
+
+% Commandes pour les phases du protocole
+\newcommand{\mfailearn}[1]{\textcolor{phase-learn}{#1}}
+\newcommand{\mfaibuild}[1]{\textcolor{phase-build}{#1}}
+\newcommand{\mfaiprove}[1]{\textcolor{phase-prove}{#1}}
+\newcommand{\mfaiactivate}[1]{\textcolor{phase-activate}{#1}}
+\newcommand{\mfaiscale}[1]{\textcolor{phase-scale}{#1}}
+
+% Surlignage
+\RequirePackage{soul}
+\sethlcolor{solana-lightpurple!40}
+
+% Hyperliens dans la table des matières
+\hypersetup{colorlinks=true,linkcolor=solana-purple}
+
+% Suppression des indentations trop larges
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\endinput

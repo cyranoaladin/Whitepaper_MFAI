@@ -1,0 +1,67 @@
+\section{Proof Systems — The Core Logic of MFAI}
+
+\begin{mfai-box}{From Talk to Proof}{certificate}
+In the MFAI protocol, value is not claimed — it is proven. Through a layered set of verifiable mechanisms, users demonstrate skill, vision, and contribution. These proofs are minted on-chain as capital, access rights, or governance power.
+\end{mfai-box}
+
+\vspace{1em}
+
+\subsection*{The Three Pillars of Proof}
+
+\begin{itemize}
+  \item \mfaiproof{Proof-of-Skill™:} Each validated learning action becomes a tokenized credential. This replaces traditional degrees with verifiable granularity.
+  \item \mfaiproof{Proof-of-Vision™:} Projects are incubated not based on persuasion, but on demonstrable planning, previous skill tokens, and execution capacity.
+  \item \mfaiproof{Proof-of-Contribution™:} Contributors — mentors, auditors, reviewers — receive attestations linked to impact, not to position.
+\end{itemize}
+
+\vspace{2em}
+
+\subsection*{How Proofs Are Generated}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.5cm and 1.8cm,
+  mfnode/.style={
+    draw=solana-green!70!black,
+    fill=solana-green!10,
+    text centered,
+    minimum height=1.2cm,
+    text width=4.7cm,
+    rounded corners=3pt,
+    font=\bfseries\small
+  }
+]
+
+\node[mfnode] (learn) {Learn \& Apply};
+\node[mfnode, below=of learn] (validate) {Peer \& AI Validation};
+\node[mfnode, below=of validate] (mint) {Mint Proof Token (PoS / PoC)};
+\node[mfnode, below=of mint] (access) {Access Rights, Governance or Capital};
+
+\draw[->, thick, color=solana-green!60!black] (learn) -- (validate);
+\draw[->, thick, color=solana-green!60!black] (validate) -- (mint);
+\draw[->, thick, color=solana-green!60!black] (mint) -- (access);
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{1em}
+
+\begin{mfai-note}
+Zyno facilitates proof generation through AEPO (query framing) and AECO (evaluation synthesis), streamlining the issuance of high-quality, on-chain attestations.
+\end{mfai-note}
+
+\vspace{2em}
+
+\subsection*{Why Proof Matters in a Web3 Protocol}
+
+\begin{itemize}
+  \item It ensures \textbf{merit-based governance}, not just capital-weighted votes.
+  \item It aligns rewards with \textbf{real contribution}, reducing rent-seeking.
+  \item It unlocks \textbf{reputation-based capital}: projects, roles, dividends.
+\end{itemize}
+
+\vspace{2em}
+
+\begin{mfai-warning}
+Without proof, reputation is noise and governance is biased. With it, MFAI becomes a meritocratic economy of builders.
+\end{mfai-warning}

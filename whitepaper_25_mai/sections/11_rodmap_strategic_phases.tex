@@ -1,0 +1,84 @@
+\section{Roadmap \& Strategic Phases}
+
+\begin{mfai-box}{A Protocol is a Journey}{map}
+The MFAI roadmap is structured in four overlapping phases. Each phase activates a new layer of infrastructure, community and sovereignty.
+\end{mfai-box}
+
+\vspace{1.5em}
+
+\subsection*{Phase 1 — Foundation (Q2–Q3 2025)}
+\begin{itemize}
+  \item Release of the MFAI Activation Guide v2.0
+  \item Launch of Zyno Alpha (AI Co-Founder™)
+  \item On-chain minting of Skillchain credentials (Testnet)
+  \item MVP of the Incubator + governance UX testing
+  \item First cohort of Sovereign Builders onboarded
+\end{itemize}
+
+\subsection*{Phase 2 — Activation (Q4 2025)}
+\begin{itemize}
+  \item Public token launch with \$MFAI utility live
+  \item Launch of the Skillchain Mining protocol
+  \item Zyno integrated with AEPO/AECO modules
+  \item NFT Pass activation (Proof-of-Skill holders)
+  \item DAO formation with progressive governance delegation
+\end{itemize}
+
+\subsection*{Phase 3 — Expansion (2026)}
+\begin{itemize}
+  \item Launchpad open to all Proof-of-Vision™ submissions
+  \item Zyno SaaS Pro B2B product for AI coaching
+  \item Interoperability with DAO tooling standards
+  \item Multi-chain credential indexing (Layer 2s + IPFS)
+  \item DAO-funded projects go live
+\end{itemize}
+
+\subsection*{Phase 4 — Synaptic Governance Scaling (2027+)}
+\begin{itemize}
+  \item Full transition to merit-based DAO governance
+  \item RAG-Gov™ activated for community decision-making
+  \item Smart treasury cycles + buyback votes on-chain
+  \item Launch of Neuro-Dividends reward layer
+  \item Integration with partner protocols for credential use
+\end{itemize}
+
+\vspace{2em}
+
+\subsection*{Roadmap Diagram}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.3cm,
+  phase/.style={
+    draw=solana-green!60!black,
+    fill=solana-green!10,
+    font=\bfseries\small,
+    text centered,
+    text width=7cm,
+    rounded corners=4pt,
+    minimum height=1.2cm
+  },
+  arrow/.style={
+    ->,
+    thick,
+    color=solana-green!60!black
+  }
+]
+
+\node[phase] (p1) {Phase 1 — Foundation\\\scriptsize{Guide, Zyno Alpha, MVP}};
+\node[phase, below=of p1] (p2) {Phase 2 — Activation\\\scriptsize{Token, Skillchain, NFT Passes}};
+\node[phase, below=of p2] (p3) {Phase 3 — Expansion\\\scriptsize{Launchpad, SaaS, Interop}};
+\node[phase, below=of p3] (p4) {Phase 4 — Synaptic Governance\\\scriptsize{DAO, RAG-Gov™, Treasury}};
+
+\draw[arrow] (p1) -- (p2);
+\draw[arrow] (p2) -- (p3);
+\draw[arrow] (p3) -- (p4);
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{2em}
+
+\begin{mfai-note}
+Each phase reinforces the core loop: Learn → Prove → Earn → Build → Govern. The roadmap is not fixed — it is forkable and shaped by DAO governance.
+\end{mfai-note}

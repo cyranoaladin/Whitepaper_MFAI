@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Factory AI – The Cognitive Activation Protocol™</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { animation: fadeIn 1s; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .tooltip { position: relative; cursor: pointer; }
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      width: max-content;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 6px 12px;
+      position: absolute;
+      z-index: 10;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.2s;
+      font-size: 0.85rem;
+      white-space: pre-line;
+    }
+    .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+    
+    /* Solana Colors */
+    .text-solana-purple { color: #9945FF; }
+    .text-solana-green { color: #14F195; }
+    .bg-solana-purple { background-color: #9945FF; }
+    .bg-solana-green { background-color: #14F195; }
+    
+    /* Gradients */
+    .bg-gradient-solana { background: linear-gradient(135deg, #9945FF 0%, #14F195 100%); }
+    .text-gradient-solana { 
+      background: linear-gradient(135deg, #9945FF 0%, #14F195 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Accent Colors */
+    .text-accent { color: #9945FF; }
+    .bg-accent { background-color: #9945FF; }
+    .text-success { color: #14F195; }
+    .bg-success { background-color: #14F195; }
+    
+    /* Hover States */
+    .hover-solana:hover { 
+      background: linear-gradient(135deg, #9945FF 0%, #14F195 100%);
+      color: white;
+    }
+    .solana-gradient-title {
+      background: linear-gradient(90deg, #9945FF 0%, #14F195 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 8px #000, 0 0 2px #14F19544;
+    }
+    .solana-green-shadow {
+      color: #14F195;
+      font-weight: bold;
+      text-shadow: 0 2px 8px #000, 0 0 2px #fff;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Sticky Navbar -->
+  <nav class="sticky top-0 z-30 bg-gray-900 bg-opacity-95 shadow px-4 py-2 flex justify-between items-center">
+    <a href="#" class="text-gradient-solana font-extrabold text-xl">MFAI</a>
+    <div class="space-x-4 text-sm">
+      <a href="#protocol" class="hover:text-solana-purple">Protocol</a>
+      <a href="#value" class="hover:text-solana-purple">Value Loop</a>
+      <a href="#zyno" class="hover:text-solana-purple">Zyno SaaS</a>
+      <a href="#dao" class="hover:text-solana-purple">Synaptic Governance™</a>
+      <a href="#token" class="hover:text-solana-purple">$MFAI Token</a>
+      <a href="https://mfai.app/whitepaper" target="_blank" class="hover:text-solana-purple font-bold">Protocol Paper</a>
+      <!-- Language Selector -->
+      <div class="inline-block relative">
+        <select class="bg-gray-800 text-white text-sm rounded px-2 py-1 appearance-none cursor-pointer">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="ar">AR</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+          <i class="fas fa-globe"></i>
+        </div>
+      </div>
+    </div>
+    <a href="mailto:contact@mfai.app?subject=Request+Investor+Deck" class="bg-gradient-solana text-white px-4 py-2 rounded-full font-bold hover:opacity-90 transition text-sm">Get the Deck – See How You Earn</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-b from-gray-800 to-gray-900 py-20 px-4 text-center fade-in">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 solana-gradient-title">
+        The Cognitive Activation Protocol™
+      </h1>
+      <p class="text-2xl mb-8 solana-green-shadow">
+        From Skillchains to Sovereignty
+      </p>
+      <p class="text-lg text-gray-300 mb-12 drop-shadow-sm">A cognitive infrastructure for post-Web2 builders in the new digital economy</p>
+      
+      <!-- Protocol Loop Visual -->
+      <div class="relative max-w-3xl mx-auto mb-12">
+        <div class="flex justify-between items-center">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-solana rounded-full flex items-center justify-center mx-auto mb-2">
+              <i class="fas fa-brain text-2xl text-white"></i>
+            </div>
+            <p class="text-sm font-semibold">Learn</p>
+          </div>
+          <div class="flex-1 h-1 bg-gradient-solana mx-4"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-solana rounded-full flex items-center justify-center mx-auto mb-2">
+              <i class="fas fa-code text-2xl text-white"></i>
+            </div>
+            <p class="text-sm font-semibold">Build</p>
+          </div>
+          <div class="flex-1 h-1 bg-gradient-solana mx-4"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-solana rounded-full flex items-center justify-center mx-auto mb-2">
+              <i class="fas fa-certificate text-2xl text-white"></i>
+            </div>
+            <p class="text-sm font-semibold">Prove</p>
+          </div>
+          <div class="flex-1 h-1 bg-gradient-solana mx-4"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-solana rounded-full flex items-center justify-center mx-auto mb-2">
+              <i class="fas fa-rocket text-2xl text-white"></i>
+            </div>
+            <p class="text-sm font-semibold">Activate</p>
+          </div>
+          <div class="flex-1 h-1 bg-gradient-solana mx-4"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-solana rounded-full flex items-center justify-center mx-auto mb-2">
+              <i class="fas fa-chart-line text-2xl text-white"></i>
+            </div>
+            <p class="text-sm font-semibold">Scale</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="bg-gray-800 bg-opacity-50 rounded-xl p-6">
+          <div class="text-3xl font-bold text-solana-purple mb-2">$0.0024</div>
+          <div class="text-sm text-gray-400">TGE Price</div>
+        </div>
+        <div class="bg-gray-800 bg-opacity-50 rounded-xl p-6">
+          <div class="text-3xl font-bold text-solana-green mb-2">40%</div>
+          <div class="text-sm text-gray-400">Initial Staking APY</div>
+        </div>
+        <div class="bg-gray-800 bg-opacity-50 rounded-xl p-6">
+          <div class="text-3xl font-bold text-solana-purple mb-2">50k</div>
+          <div class="text-sm text-gray-400">Projected Year 5 Users</div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="mt-12 flex flex-col md:flex-row justify-center gap-4">
+        <a href="mailto:contact@mfai.app?subject=Request+Investor+Deck" class="bg-gradient-solana text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition text-lg">Get the Deck – See How You Earn</a>
+        <a href="#protocol" class="bg-gray-700 text-white px-8 py-3 rounded-full font-bold hover:bg-solana-purple transition text-lg">Explore the Protocol</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Value Loop Breakdown -->
+  <section id="value" class="py-20 px-4 max-w-6xl mx-auto fade-in">
+    <h2 class="text-3xl font-bold text-center text-gradient-solana mb-12">
+      The Value Loop™
+    </h2>
+    
+    <!-- Value Sources Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <!-- Zyno Value -->
+      <div class="bg-gray-800 rounded-xl p-6 transform transition-transform duration-300 hover:scale-105">
+        <div class="w-16 h-16 bg-zyno bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+          <i class="fas fa-robot text-2xl text-zyno"></i>
+        </div>
+        <h3 class="text-xl font-bold text-zyno mb-4">Zyno: AI Co-Founder™</h3>
+        <ul class="text-gray-300 space-y-2 mb-4">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>Adaptive Evolutionary Potential Analysis (AEPO™)</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>Contextual AI Co-Founder</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>Optimized Training Agent (AECO™)</span>
+          </li>
+        </ul>
+        <div class="text-sm text-gray-400">
+          <span class="font-semibold text-zyno">Value Capture:</span> SaaS subscriptions, API access, automation tools
+        </div>
+      </div>
+
+      <!-- DAO Value -->
+      <div class="bg-gray-800 rounded-xl p-6 transform transition-transform duration-300 hover:scale-105">
+        <div class="w-16 h-16 bg-aepo bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+          <i class="fas fa-brain text-2xl text-aepo"></i>
+        </div>
+        <h3 class="text-xl font-bold text-aepo mb-4">Synaptic Governance™</h3>
+        <ul class="text-gray-300 space-y-2 mb-4">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>Meritocratic voting power</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>Smart Committee decisions</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>Neuro-Dividends™ distribution</span>
+          </li>
+        </ul>
+        <div class="text-sm text-gray-400">
+          <span class="font-semibold text-aepo">Value Capture:</span> Governance fees, proposal creation, strategic decisions
+        </div>
+      </div>
+
+      <!-- Staking Value -->
+      <div class="bg-gray-800 rounded-xl p-6 transform transition-transform duration-300 hover:scale-105">
+        <div class="w-16 h-16 bg-aeco bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+          <i class="fas fa-lock text-2xl text-aeco"></i>
+        </div>
+        <h3 class="text-xl font-bold text-aeco mb-4">Cognitive Lock™</h3>
+        <ul class="text-gray-300 space-y-2 mb-4">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>Dynamic APY rewards</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>XP Cert multipliers</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+            <span>Launchpad priority</span>
+          </li>
+        </ul>
+        <div class="text-sm text-gray-400">
+          <span class="font-semibold text-aeco">Value Capture:</span> Staking fees, lock duration bonuses, NFT boosts
+        </div>
+      </div>
+    </div>
+
+    <!-- Value per Action -->
+    <div class="bg-gray-800 rounded-xl p-8 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold text-solana-purple mb-6 text-center">Value per Action</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h4 class="text-lg font-semibold text-gray-300 mb-4">Learning & Building</h4>
+          <ul class="space-y-3">
+            <li class="flex justify-between items-center">
+              <span class="text-gray-400">Complete Mission</span>
+              <span class="text-green-400">10-50 $MFAI</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-400">Earn XP Cert</span>
+              <span class="text-green-400">100-500 $MFAI</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-400">Build MVP</span>
+              <span class="text-green-400">500-2000 $MFAI</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-300 mb-4">Governance & Staking</h4>
+          <ul class="space-y-3">
+            <li class="flex justify-between items-center">
+              <span class="text-gray-400">DAO Vote</span>
+              <span class="text-green-400">5-20 $MFAI</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-400">Stake 1000 $MFAI</span>
+              <span class="text-green-400">40% APY</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-400">Smart Committee</span>
+              <span class="text-green-400">2x Voting Power</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-6 text-center">*Values based on TGE price of $0.0024. Subject to market conditions and protocol parameters.</p>
+    </div>
+  </section>
+
+  <!-- Protocol Section -->
+  <section id="protocol" class="py-12 px-4 max-w-6xl mx-auto fade-in">
+    <h2 class="text-2xl font-bold text-solana-purple mb-6">The Cognitive Activation Protocol™</h2>
+    <p class="text-gray-300 mb-4">Money Factory AI is not just a platform. It is a cognitive activation engine, an intelligent gateway between learning, innovation, and entrepreneurial sovereignty. Our protocol transforms intelligence, skills, and contribution into verifiable ownership and collective power.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-6">
+      <div class="transition-transform duration-300 hover:scale-110">
+        <span class="text-3xl">🎮</span>
+        <p class="mt-2 font-semibold">Skillchain Mining™</p>
+      </div>
+      <div class="transition-transform duration-300 hover:scale-110">
+        <span class="text-3xl">🤖</span>
+        <p class="mt-2 font-semibold">AI Co-Founder™ (Zyno)</p>
+      </div>
+      <div class="transition-transform duration-300 hover:scale-110">
+        <span class="text-3xl">🪙</span>
+        <p class="mt-2 font-semibold">Cognitive Lock™</p>
+      </div>
+      <div class="transition-transform duration-300 hover:scale-110">
+        <span class="text-3xl">🗳️</span>
+        <p class="mt-2 font-semibold">Synaptic Governance™</p>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:justify-between gap-4 text-gray-400 text-sm">
+      <div><strong>Revenue Sources:</strong> Subscriptions, Founder Pass sales, Cognitive Lock™, Proof-of-Vision™ fees, Zyno Pro</div>
+      <div><strong>Target Users:</strong> Post-Web2 builders, Web3-native entrepreneurs, DePIN & DePAI pioneers</div>
+    </div>
+    <p class="text-xs text-yellow-400 mt-4">All pricing and supply are subject to change after TGE and based on market traction.</p>
+  </section>
+
+  <!-- Pricing Filter Tabs + Comparison Cards -->
+  <section id="plans" class="py-12 px-4 max-w-6xl mx-auto fade-in">
+    <h2 class="text-2xl font-bold text-solana-purple mb-4">Choose Your Access Level</h2>
+    <p class="text-gray-300 mb-4">Two ways to unlock Money Factory AI: flexible monthly plans or exclusive lifetime passes.</p>
+    
+    <!-- Tabs de filtrage -->
+    <div class="flex gap-4 mb-8 justify-center">
+      <button id="tabAll" class="px-4 py-2 rounded-full font-semibold border border-solana-purple text-solana-purple hover:bg-gradient-solana hover:text-white transition">All Plans</button>
+      <button id="tabSub" class="px-4 py-2 rounded-full font-semibold border border-solana-purple text-solana-purple hover:bg-gradient-solana hover:text-white transition">Subscriptions</button>
+      <button id="tabNFT" class="px-4 py-2 rounded-full font-semibold border border-solana-purple text-solana-purple hover:bg-gradient-solana hover:text-white transition">Lifetime Passes</button>
+    </div>
+
+    <div id="plansGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Plans d'Abonnement -->
+      <div data-type="Subscription" class="plan-card bg-gray-800 p-6 rounded-xl border border-solana-green relative">
+        <h3 class="text-solana-green text-xl font-bold mb-2">Start Hustling</h3>
+        <p class="text-white font-semibold mb-4">$24.99 / month<br><span class="text-xs text-gray-400">or $224.99/year <span class="text-green-400">(-25%)</span></span></p>
+        <ul class="text-sm text-gray-200 space-y-1 mb-2">
+          <li class="tooltip">🎓 Lite Academy Access <span class="tooltip-text">Web2 onboarding only, no certs</span></li>
+          <li class="tooltip">🤖 Zyno AI: 100 credits <span class="tooltip-text">Text, prompts, sketch</span></li>
+          <li>💸 L2E x1.0</li>
+          <li>💬 1 Coaching per month</li>
+          <li>🌍 Standard Community</li>
+        </ul>
+        <div class="bg-green-900 bg-opacity-60 rounded p-2 mt-2 text-green-200 text-xs">
+          <strong>Stake & Unlock:</strong> Boost your rewards and governance power by staking $MFAI.
+        </div>
+        <button class="plan-details-toggle w-full mt-4 text-sm text-gray-400 hover:text-solana-purple">
+          <i class="fas fa-chevron-down mr-2"></i>More Details
+        </button>
+        <div class="plan-details hidden mt-4 pt-4 border-t border-gray-700">
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>• Access to basic templates</li>
+            <li>• Community forum access</li>
+            <li>• Basic analytics</li>
+            <li>• Email support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-type="Subscription" class="plan-card bg-gray-800 p-6 rounded-xl border-4 border-solana-purple relative">
+        <span class="absolute top-0 right-0 bg-gradient-solana text-white text-xs px-2 py-1 rounded-bl font-bold">Best Value</span>
+        <h3 class="text-solana-purple text-xl font-bold mb-2">Master Flow</h3>
+        <p class="text-white font-semibold mb-4">$59.99 / month<br><span class="text-xs text-gray-400">or $539.99/year <span class="text-green-400">(-25%)</span></span></p>
+        <ul class="text-sm text-gray-200 space-y-1 mb-2">
+          <li class="tooltip">🎓 Full Access + Certifications <span class="tooltip-text">+ XP Missions + DAO training</span></li>
+          <li class="tooltip">🤖 Zyno AI: Unlimited <span class="tooltip-text">API, Automation</span></li>
+          <li>💸 L2E x1.5</li>
+          <li>💬 Weekly Coaching</li>
+          <li>👑 VIP + DAO observer</li>
+        </ul>
+        <div class="bg-green-900 bg-opacity-60 rounded p-2 mt-2 text-green-200 text-xs">
+          <strong>Stake & Unlock:</strong> Boost your rewards and governance power by staking $MFAI.
+        </div>
+        <button class="plan-details-toggle w-full mt-4 text-sm text-gray-400 hover:text-solana-purple">
+          <i class="fas fa-chevron-down mr-2"></i>More Details
+        </button>
+        <div class="plan-details hidden mt-4 pt-4 border-t border-gray-700">
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>• Access to all AI capabilities</li>
+            <li>• Custom dashboards and insights</li>
+            <li>• API access</li>
+            <li>• Weekly coaching</li>
+            <li>• VIP access to DAO</li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-type="Subscription" class="plan-card bg-gray-800 p-6 rounded-xl border border-solana-green relative">
+        <h3 class="text-solana-green text-xl font-bold mb-2">Growth Edge</h3>
+        <p class="text-white font-semibold mb-4">$44.99 / month<br><span class="text-xs text-gray-400">or $404.99/year <span class="text-green-400">(-25%)</span></span></p>
+        <ul class="text-sm text-gray-200 space-y-1 mb-2">
+          <li class="tooltip">🎓 Complete Standard Academy <span class="tooltip-text">All courses, certs</span></li>
+          <li class="tooltip">🤖 Zyno AI: 500 credits <span class="tooltip-text">Go-to-market tools</span></li>
+          <li>💸 L2E x1.2</li>
+          <li>💬 2 Coaching per month</li>
+          <li>🌐 Premium Community</li>
+        </ul>
+        <div class="bg-green-900 bg-opacity-60 rounded p-2 mt-2 text-green-200 text-xs">
+          <strong>Stake & Unlock:</strong> Boost your rewards and governance power by staking $MFAI.
+        </div>
+        <button class="plan-details-toggle w-full mt-4 text-sm text-gray-400 hover:text-solana-purple">
+          <i class="fas fa-chevron-down mr-2"></i>More Details
+        </button>
+        <div class="plan-details hidden mt-4 pt-4 border-t border-gray-700">
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>• Access to all AI capabilities</li>
+            <li>• Go-to-market tools</li>
+            <li>• 2x Voting Power</li>
+            <li>• 2 Coaching per month</li>
+            <li>• Premium community access</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Passes à Vie -->
+      <div data-type="NFT" class="plan-card bg-gray-800 p-6 rounded-xl border border-solana-purple relative">
+        <span class="absolute top-0 right-0 bg-gradient-solana text-white text-xs px-2 py-1 rounded-bl">1000 Max</span>
+        <span class="absolute top-0 left-0 bg-solana-purple text-white text-xs px-2 py-1 rounded-br">Limited Edition</span>
+        <h3 class="text-solana-purple text-xl font-bold mb-2">Gold Founder Pass</h3>
+        <p class="text-white font-semibold mb-2">$249 <span class="text-xs text-gray-400">lifetime</span></p>
+        <ul class="text-sm text-gray-200 space-y-1 mb-2">
+          <li>🎓 Lite Academy</li>
+          <li>🤖 Zyno: Lite (basic tools)</li>
+          <li>🚀 Launchpad: Basic project listing</li>
+          <li>💸 Revenue Share: 2%</li>
+          <li>🔒 Staking Boost: +10%</li>
+          <li>🪙 Lifetime access</li>
+        </ul>
+        <div class="bg-yellow-900 bg-opacity-60 rounded-lg p-4 mt-4 text-yellow-200 text-sm">
+          <strong>Why Buy Now?</strong>
+          <ul class="list-disc ml-5 mt-1">
+            <li>Early Mint Bonus: additional staking boost</li>
+            <li>DAO Observer Right: Early Governance Access</li>
+            <li>Launchpad Slot Boost: priority for first projects</li>
+            <li>Price doubles post-TGE</li>
+          </ul>
+        </div>
+        <button class="plan-details-toggle w-full mt-4 text-sm text-gray-400 hover:text-solana-purple">
+          <i class="fas fa-chevron-down mr-2"></i>More Details
+        </button>
+        <div class="plan-details hidden mt-4 pt-4 border-t border-gray-700">
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>• Lite Academy access</li>
+            <li>• Basic tools</li>
+            <li>• 10% staking boost</li>
+            <li>• 1000 Max NFT</li>
+            <li>• 2% revenue share</li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-type="NFT" class="plan-card bg-gray-800 p-6 rounded-xl border border-solana-green relative">
+        <span class="absolute top-0 right-0 bg-gradient-solana text-white text-xs px-2 py-1 rounded-bl">700 Max</span>
+        <span class="absolute top-0 left-0 bg-solana-purple text-white text-xs px-2 py-1 rounded-br">Limited Edition</span>
+        <h3 class="text-solana-green text-xl font-bold mb-2">Platinum Founder Pass</h3>
+        <p class="text-white font-semibold mb-2">$499 <span class="text-xs text-gray-400">lifetime</span></p>
+        <ul class="text-sm text-gray-200 space-y-1 mb-2">
+          <li>🎓 Standard + Certs</li>
+          <li>🤖 Zyno: Priority (go-to-market tools)</li>
+          <li>🚀 Launchpad: Priority Access</li>
+          <li>🗳 DAO: Vote Only</li>
+          <li>💸 Revenue Share: 3%</li>
+          <li>🔒 Staking Boost: +20%</li>
+          <li>🪙 Lifetime access</li>
+        </ul>
+        <div class="bg-yellow-900 bg-opacity-60 rounded-lg p-4 mt-4 text-yellow-200 text-sm">
+          <strong>Why Buy Now?</strong>
+          <ul class="list-disc ml-5 mt-1">
+            <li>Early Mint Bonus: additional staking boost</li>
+            <li>DAO Observer Right: Early Governance Access</li>
+            <li>Launchpad Slot Boost: priority for first projects</li>
+            <li>Price doubles post-TGE</li>
+          </ul>
+        </div>
+        <button class="plan-details-toggle w-full mt-4 text-sm text-gray-400 hover:text-solana-purple">
+          <i class="fas fa-chevron-down mr-2"></i>More Details
+        </button>
+        <div class="plan-details hidden mt-4 pt-4 border-t border-gray-700">
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>• Standard templates</li>
+            <li>• Go-to-market tools</li>
+            <li>• 20% staking boost</li>
+            <li>• 700 Max NFT</li>
+            <li>• 3% revenue share</li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-type="NFT" class="plan-card bg-gray-800 p-6 rounded-xl border border-solana-purple relative">
+        <span class="absolute top-0 right-0 bg-gradient-solana text-white text-xs px-2 py-1 rounded-bl">300 Max</span>
+        <span class="absolute top-0 left-0 bg-solana-purple text-white text-xs px-2 py-1 rounded-br">Limited Edition</span>
+        <h3 class="text-solana-purple text-xl font-bold mb-2">Diamond Founder Pass</h3>
+        <p class="text-white font-semibold mb-2">$999 <span class="text-xs text-gray-400">lifetime</span></p>
+        <ul class="text-sm text-gray-200 space-y-1 mb-2">
+          <li>🎓 All + XP Missions + VIP</li>
+          <li>🤖 Zyno: Unlimited + API</li>
+          <li>🚀 Launchpad: VIP + Featured</li>
+          <li>🗳 DAO: Full Rights</li>
+          <li>💸 Revenue Share: 5%</li>
+          <li>🔒 Staking Boost: +30%</li>
+          <li>🪙 Lifetime access</li>
+        </ul>
+        <div class="bg-yellow-900 bg-opacity-60 rounded-lg p-4 mt-4 text-yellow-200 text-sm">
+          <strong>Why Buy Now?</strong>
+          <ul class="list-disc ml-5 mt-1">
+            <li>Early Mint Bonus: additional staking boost</li>
+            <li>DAO Observer Right: Early Governance Access</li>
+            <li>Launchpad Slot Boost: priority for first projects</li>
+            <li>Price doubles post-TGE</li>
+          </ul>
+        </div>
+        <button class="plan-details-toggle w-full mt-4 text-sm text-gray-400 hover:text-solana-purple">
+          <i class="fas fa-chevron-down mr-2"></i>More Details
+        </button>
+        <div class="plan-details hidden mt-4 pt-4 border-t border-gray-700">
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>• All AI capabilities</li>
+            <li>• Unlimited API access</li>
+            <li>• 30% staking boost</li>
+            <li>• 300 Max NFT</li>
+            <li>• 5% revenue share</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-xs text-yellow-400 mt-4 text-center">Founder Passes are strictly limited. Scarcity and pricing evolution are key to tokenomics and long-term value.</p>
+  </section>
+
+  <!-- Zyno Video Section -->
+  <div class="relative">
+    <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg overflow-hidden">
+      <div class="w-full h-full flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-50"></div>
+        <div class="text-center z-10">
+          <i class="fas fa-play-circle text-6xl text-solana-purple mb-4"></i>
+          <h4 class="text-xl font-bold text-white mb-2">Watch Zyno in Action</h4>
+          <p class="text-gray-300">See how Zyno transforms your business ideas into reality</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 text-center">
+      <p class="text-sm text-gray-400">Coming soon: 90-second demo showcasing Zyno's capabilities</p>
+    </div>
+  </div>
+
+  <script>
+    // Tabs filter
+    const tabAll = document.getElementById('tabAll');
+    const tabSub = document.getElementById('tabSub');
+    const tabNFT = document.getElementById('tabNFT');
+    const planCards = document.querySelectorAll('.plan-card');
+    
+    function setTab(tab) {
+      [tabAll, tabSub, tabNFT].forEach(b => {
+        b.classList.remove('bg-gradient-solana', 'text-white');
+        b.classList.add('text-solana-purple');
+      });
+      tab.classList.remove('text-solana-purple');
+      tab.classList.add('bg-gradient-solana', 'text-white');
+      
+      const type = tab === tabAll ? 'All' : (tab === tabSub ? 'Subscription' : 'NFT');
+      planCards.forEach(card => {
+        if (type === 'All' || card.getAttribute('data-type') === type) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+    
+    tabAll.addEventListener('click', () => setTab(tabAll));
+    tabSub.addEventListener('click', () => setTab(tabSub));
+    tabNFT.addEventListener('click', () => setTab(tabNFT));
+    setTab(tabAll);
+
+    // Plan Details Toggle
+    document.querySelectorAll('.plan-details-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const details = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        details.classList.toggle('hidden');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+        button.classList.toggle('text-solana-purple');
+      });
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('opacity-0', 'invisible');
+        backToTop.classList.add('opacity-100', 'visible');
+      } else {
+        backToTop.classList.add('opacity-0', 'invisible');
+        backToTop.classList.remove('opacity-100', 'visible');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <!-- Value per $ Section -->
+  <section id="value" class="py-12 px-4 max-w-6xl mx-auto fade-in">
+    <h2 class="text-2xl font-bold text-solana-purple mb-4">Value per $</h2>
+    <p class="text-gray-300 mb-4">Projected value distribution across different components of the Money Factory AI ecosystem.</p>
+    
+    <div class="mt-8 mb-8 max-w-4xl mx-auto bg-gray-800 rounded-xl p-6 shadow">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-left border-b border-gray-700">
+              <th class="pb-2">Plan</th>
+              <th class="pb-2">Zyno Value</th>
+              <th class="pb-2">DAO Value</th>
+              <th class="pb-2">Staking Value</th>
+              <th class="pb-2">Total Value</th>
+              <th class="pb-2">Value per $1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-700">
+              <td class="py-3">Start Hustling</td>
+              <td>$50</td>
+              <td>$20</td>
+              <td>$30</td>
+              <td>$100</td>
+              <td>1.0x</td>
+            </tr>
+            <tr class="border-b border-gray-700">
+              <td class="py-3">Growth Edge</td>
+              <td>$200</td>
+              <td>$100</td>
+              <td>$200</td>
+              <td>$500</td>
+              <td>1.25x</td>
+            </tr>
+            <tr>
+              <td class="py-3">Master Flow</td>
+              <td>$500</td>
+              <td>$300</td>
+              <td>$700</td>
+              <td>$1,500</td>
+              <td>1.5x</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Value Breakdown -->
+    <div class="mt-8 max-w-3xl mx-auto bg-gray-800 rounded-xl p-6 shadow">
+      <h3 class="text-solana-purple font-bold mb-4">Value Components</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-4 bg-gray-700 rounded-lg">
+          <h4 class="text-solana-purple font-semibold mb-2">Zyno Value</h4>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>• AI Co-Founder™ Access</li>
+            <li>• Skillchain Mining™</li>
+            <li>• Proof-of-Vision™ Tools</li>
+            <li>• RAG-Gov™ Integration</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-gray-700 rounded-lg">
+          <h4 class="text-solana-purple font-semibold mb-2">DAO Value</h4>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>• Synaptic Power</li>
+            <li>• Governance Rights</li>
+            <li>• Smart Committee Access</li>
+            <li>• Neuro-Dividends™</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-gray-700 rounded-lg">
+          <h4 class="text-solana-purple font-semibold mb-2">Staking Value</h4>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>• Cognitive Lock™ APY</li>
+            <li>• XP Cert Multipliers</li>
+            <li>• NFT Pass Bonuses</li>
+            <li>• Launchpad Priority</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 mt-4">*Projections are for illustration only. Actual values may vary once the platform is live.</p>
+    </div>
+  </section>
+
+  <!-- Zyno SaaS Section -->
+  <section id="zyno" class="py-20 px-4 max-w-6xl mx-auto fade-in">
+    <h2 class="text-3xl font-bold text-center text-gradient-solana mb-12">
+      Zyno: The AI Co-Founder™
+    </h2>
+
+    <!-- Zyno Overview -->
+    <div class="bg-gray-800 rounded-xl p-8 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-solana-purple mb-4">Your Intelligent Business Partner</h3>
+          <p class="text-gray-300 mb-6">
+            Zyno combines advanced AI capabilities with deep business expertise to help you build, validate, and scale your projects. Think of it as your algorithmic co-founder.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-zyno bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-brain text-zyno"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-200">AEPO™ Analysis</h4>
+                <p class="text-sm text-gray-400">Adaptive Evolutionary Potential Analysis for strategic planning</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-zyno bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-code text-zyno"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-200">Smart Development</h4>
+                <p class="text-sm text-gray-400">AI-powered code generation and project structuring</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-zyno bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-chart-line text-zyno"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-200">Growth Analytics</h4>
+                <p class="text-sm text-gray-400">Real-time insights and performance optimization</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg overflow-hidden">
+            <!-- Placeholder for Zyno Demo Video/Animation -->
+            <div class="w-full h-full flex items-center justify-center">
+              <i class="fas fa-play-circle text-6xl text-zyno"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Free vs Pro Comparison -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Free Tier -->
+      <div class="bg-gray-800 rounded-xl p-6">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-300 mb-2">Zyno Free</h3>
+          <p class="text-gray-400">For builders starting their journey</p>
+        </div>
+        <ul class="space-y-4 mb-6">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+            <div>
+              <span class="text-gray-300">Basic AI Co-Founder™</span>
+              <p class="text-sm text-gray-400">Limited interactions per day</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+            <div>
+              <span class="text-gray-300">Standard Templates</span>
+              <p class="text-sm text-gray-400">Access to basic project templates</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+            <div>
+              <span class="text-gray-300">Community Support</span>
+              <p class="text-sm text-gray-400">Access to community forums</p>
+            </div>
+          </li>
+        </ul>
+        <div class="text-center">
+          <span class="text-2xl font-bold text-gray-300">Free</span>
+          <p class="text-sm text-gray-400">With $MFAI staking</p>
+        </div>
+      </div>
+
+      <!-- Pro Tier -->
+      <div class="bg-gray-800 rounded-xl p-6 border-2 border-solana-purple">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold text-solana-purple mb-2">Zyno Pro</h3>
+          <p class="text-gray-400">For serious builders and teams</p>
+        </div>
+        <ul class="space-y-4 mb-6">
+          <li class="flex items-start">
+            <i class="fas fa-check text-solana-purple mt-1 mr-3"></i>
+            <div>
+              <span class="text-gray-300">Unlimited AI Co-Founder™</span>
+              <p class="text-sm text-gray-400">Full access to all AI capabilities</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-solana-purple mt-1 mr-3"></i>
+            <div>
+              <span class="text-gray-300">Advanced Analytics</span>
+              <p class="text-sm text-gray-400">Custom dashboards and insights</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-solana-purple mt-1 mr-3"></i>
+            <div>
+              <span class="text-gray-300">API Access</span>
+              <p class="text-sm text-gray-400">Integrate Zyno into your workflow</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-solana-purple mt-1 mr-3"></i>
+            <div>
+              <span class="text-gray-300">Priority Support</span>
+              <p class="text-sm text-gray-400">24/7 dedicated assistance</p>
+            </div>
+          </li>
+        </ul>
+        <div class="text-center">
+          <span class="text-2xl font-bold text-solana-purple">$99/month</span>
+          <p class="text-sm text-gray-400">or 41,250 $MFAI/year</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- API Pricing -->
+    <div class="mt-12 bg-gray-800 rounded-xl p-8">
+      <h3 class="text-2xl font-bold text-solana-purple mb-6 text-center">API Access Pricing</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-700 rounded-lg p-4">
+          <h4 class="text-lg font-semibold text-gray-300 mb-2">Starter</h4>
+          <p class="text-3xl font-bold text-solana-purple mb-2">$49<span class="text-sm text-gray-400">/month</span></p>
+          <p class="text-3xl font-bold text-solana-purple mb-2">100<span class="text-sm text-gray-400">/day</span></p>
+          <p class="text-sm text-gray-400 mb-4">API calls</p>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>• Basic endpoints</li>
+            <li>• Standard rate limits</li>
+            <li>• Community support</li>
+          </ul>
+          <button class="w-full mt-4 bg-gradient-solana text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition">Get Started</button>
+        </div>
+        <div class="bg-gray-700 rounded-lg p-4 border-2 border-solana-purple">
+          <h4 class="text-lg font-semibold text-gray-300 mb-2">Professional</h4>
+          <p class="text-3xl font-bold text-solana-purple mb-2">$199<span class="text-sm text-gray-400">/month</span></p>
+          <p class="text-3xl font-bold text-solana-purple mb-2">1,000<span class="text-sm text-gray-400">/day</span></p>
+          <p class="text-sm text-gray-400 mb-4">API calls</p>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>• All endpoints</li>
+            <li>• Higher rate limits</li>
+            <li>• Priority support</li>
+            <li>• Custom integrations</li>
+          </ul>
+          <button class="w-full mt-4 bg-gradient-solana text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition">Get Started</button>
+        </div>
+        <div class="bg-gray-700 rounded-lg p-4">
+          <h4 class="text-lg font-semibold text-gray-300 mb-2">Enterprise</h4>
+          <p class="text-3xl font-bold text-solana-purple mb-2">Custom</p>
+          <p class="text-3xl font-bold text-solana-purple mb-2">Unlimited</p>
+          <p class="text-sm text-gray-400 mb-4">API calls</p>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>• Custom endpoints</li>
+            <li>• Custom rate limits</li>
+            <li>• Dedicated support</li>
+            <li>• SLA guarantee</li>
+            <li>• Custom solutions</li>
+          </ul>
+          <button class="w-full mt-4 bg-gradient-solana text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition">Contact Sales</button>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-6 text-center">*API pricing can be paid in $MFAI at current market rates. Volume discounts available for annual plans.</p>
+    </div>
+  </section>
+
+  <!-- DAO Section -->
+  <section id="dao" class="py-12 px-4 max-w-6xl mx-auto fade-in">
+    <h2 class="text-2xl font-bold text-solana-purple mb-4">Synaptic Governance™</h2>
+    <p class="text-gray-300 mb-4">A meritocratic governance system where voting power is determined by cognitive contribution, skill validation, and ecosystem participation.</p>
+    
+    <!-- Governance Roles -->
+    <div class="mt-8 mb-8 max-w-3xl mx-auto bg-gray-800 rounded-xl p-6 shadow">
+      <h3 class="text-zyno font-bold mb-4">Governance Roles & Requirements</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-left border-b border-gray-700">
+              <th class="pb-2">Role</th>
+              <th class="pb-2">Requirements</th>
+              <th class="pb-2">Benefits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-700">
+              <td class="py-3">Viewer</td>
+              <td>Basic Profile</td>
+              <td>Read-only access to proposals</td>
+            </tr>
+            <tr class="border-b border-gray-700">
+              <td class="py-3">Voter</td>
+              <td>100 $MFAI + Basic XP Cert</td>
+              <td>Voting rights on proposals</td>
+            </tr>
+            <tr class="border-b border-gray-700">
+              <td class="py-3">Proposer</td>
+              <td>5,000 $MFAI + Advanced XP Cert</td>
+              <td>Create and manage proposals</td>
+            </tr>
+            <tr>
+              <td class="py-3">Smart Committee</td>
+              <td>Master XP Cert + Diamond Pass</td>
+              <td>Strategic decision making</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Voting Power Calculation -->
+    <div class="mt-8 mb-8 max-w-2xl mx-auto bg-gray-800 rounded-xl p-6 shadow">
+      <h3 class="text-aeco font-bold mb-4">Voting Power Calculation</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 bg-gray-700 rounded-lg">
+          <h4 class="text-orange-400 font-semibold mb-2">Base Power</h4>
+          <ul class="text-sm text-gray-300 space-y-1">
+            <li>• Staked $MFAI (1:1)</li>
+            <li>• XP Cert Bonus (up to 2x)</li>
+            <li>• NFT Pass Bonus (up to 1.5x)</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-gray-700 rounded-lg">
+          <h4 class="text-orange-400 font-semibold mb-2">Smart Committee</h4>
+          <ul class="text-sm text-gray-300 space-y-1">
+            <li>• 2x multiplier on base power</li>
+            <li>• Access to RAG-Gov™</li>
+            <li>• Strategic proposal rights</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Governance Process -->
+    <div class="mt-8 mb-8 max-w-2xl mx-auto bg-gray-800 rounded-xl p-6 shadow">
+      <h3 class="text-zyno font-bold mb-4">Governance Process</h3>
+      <div class="space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="text-2xl">1️⃣</div>
+          <div>
+            <h4 class="text-orange-400 font-semibold mb-1">Proposal Creation</h4>
+            <p class="text-sm text-gray-300">Proposers submit detailed proposals with impact analysis</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="text-2xl">2️⃣</div>
+          <div>
+            <h4 class="text-orange-400 font-semibold mb-1">Discussion Phase</h4>
+            <p class="text-sm text-gray-300">Community discussion and feedback period</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="text-2xl">3️⃣</div>
+          <div>
+            <h4 class="text-orange-400 font-semibold mb-1">Voting Period</h4>
+            <p class="text-sm text-gray-300">Weighted voting based on Synaptic Power</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="text-2xl">4️⃣</div>
+          <div>
+            <h4 class="text-orange-400 font-semibold mb-1">Implementation</h4>
+            <p class="text-sm text-gray-300">Smart Committee oversees execution</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
+    <div class="mb-4 flex flex-wrap justify-center gap-6 items-center">
+      <a href="https://x.com/MoneyFactoryAI" target="_blank" class="hover:text-solana-purple flex items-center gap-1"><i class="fa-brands fa-x-twitter text-xl"></i> X</a>
+      <a href="https://instagram.com/moneyfactoryai" target="_blank" class="hover:text-solana-purple flex items-center gap-1"><i class="fa-brands fa-instagram text-xl"></i> Instagram</a>
+      <a href="https://t.me/MoneyFactoryAI_Portal" target="_blank" class="hover:text-solana-purple flex items-center gap-1"><i class="fa-brands fa-telegram text-xl"></i> Telegram</a>
+      <a href="https://medium.com/@moneyfactoryai" target="_blank" class="hover:text-solana-purple flex items-center gap-1"><i class="fa-brands fa-medium text-xl"></i> Medium</a>
+      <a href="https://www.linkedin.com/company/money-factory-ai" target="_blank" class="hover:text-solana-purple flex items-center gap-1"><i class="fa-brands fa-linkedin text-xl"></i> LinkedIn</a>
+      <a href="https://medium.com/@moneyfactoryai/business-model-breakdown-2025-abcdef" target="_blank" class="hover:text-solana-purple flex items-center gap-1"><i class="fa-brands fa-medium text-xl"></i> Business Model Breakdown (2025)</a>
+    </div>
+    <div class="mb-2">
+      &copy; 2025 Money Factory AI. All rights reserved. &nbsp;|&nbsp; <a href="mailto:contact@mfai.app?subject=Request+Investor+Deck" class="underline hover:text-solana-purple">contact@mfai.app</a>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-gradient-solana text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity opacity-0 invisible">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</body>
+</html> 

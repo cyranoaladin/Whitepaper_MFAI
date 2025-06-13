@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{mfai}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes, calc}
+
+\begin{document}
+
+\section{Executive Summary}
+
+\begin{mfai-box}{Protocol Overview}{bolt}
+\textbf{Money Factory AI} is a next-generation infrastructure designed to activate \textbf{entrepreneurial potential} in the era of the \textbf{Internet of Values}. Combining Artificial Intelligence and Ademy Innovation, Money Factory AI transforms cognitive effort into verifiable digital ownership.
+\end{mfai-box}
+
+In a world where talent is abundant but pathways to value creation are fragmented, Money Factory AI introduces the \mfaiconcept{Cognitive Activation Protocol} — a full-stack decentralized system that turns learning, contribution, and innovation into programmable capital.
+
+The goal is clear: empower anyone to create and grow their own \textbf{Business 3.0} — a sovereign venture powered by AI, enhanced through Web3, and rooted in proof rather than promise.
+
+At the core of this transformation is \textbf{Zyno}™, our AI Co-Founder agent. Through its AEPO (Ask Engine Prompt Optimization) and AECO (Answer Engine Clarity Optimization) modules, Zyno provides personalized guidance to learners, builders, and entrepreneurs as they evolve from idea to implementation.
+
+\mfaithink{“You don’t pitch. You prove. And your proof becomes capital.”}
+
+\subsection*{The Protocol in Action}
+
+The journey of every user is designed to follow a loop of activation that reinforces sovereignty:
+
+\begin{itemize}
+    \item \mfailearn{Learn} \textrightarrow\ \mfaiprove{Prove} \textrightarrow\ \mfaiprove{Tokenize} \textrightarrow\ \mfaibuild{Build} \textrightarrow\ \mfaiscale{Govern} \textrightarrow\ \mfaiscale{Earn}
+    \item Zyno™ guides each step through contextual intelligence and actionable clarity
+    \item \mfaiconcept{Proof Pass}™ credentials are issued on-chain and unlock ecosystem utility and DAO rights
+    \item Every effort is rewarded through \texttt{\$MFAI} and the \mfaiconcept{Neuro-Dividends}™ mechanism
+\end{itemize}
+
+\vspace{1em}
+\textcolor{solana-green!70!black}{\textbf{Diagram: The Activation Loop}}
+
+\vspace{0.5em}
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.8cm and 2.2cm,
+  mfai-node/.style={
+    draw=solana-purple,
+    fill=solana-purple!10,
+    text centered,
+    minimum height=1.3cm,
+    text width=4.1cm,
+    font=\bfseries\small,
+    rounded corners=4pt
+  },
+  mfai-arrow/.style={
+    ->,
+    thick,
+    color=solana-purple
+  }
+]
+
+% Ligne 1
+\node[mfai-node] (learn) {\faBook\quad Learn\\\scriptsize Skillchain Mining™};
+\node[mfai-node, right=of learn] (prove) {\faCheck\quad Prove\\\scriptsize Proof-of-Skill Tokens™};
+\node[mfai-node, right=of prove] (tokenize) {\faMagic\quad Tokenize\\\scriptsize AI + Certification};
+
+% Ligne 2
+\node[mfai-node, below=2.5cm of learn] (earn) {\faCoins\quad Earn\\\scriptsize Neuro-Dividends™};
+\node[mfai-node, right=of earn] (govern) {\faGavel\quad Govern\\\scriptsize Synaptic Governance™};
+\node[mfai-node, right=of govern] (build) {\faRocket\quad Build\\\scriptsize Project Launch};
+
+% Flèches
+\draw[mfai-arrow] (learn) -- (prove);
+\draw[mfai-arrow] (prove) -- (tokenize);
+\draw[mfai-arrow] (tokenize.south) -- (build.north);
+\draw[mfai-arrow] (build) -- (govern);
+\draw[mfai-arrow] (govern) -- (earn);
+\draw[mfai-arrow] (earn.north) -- (learn.south);
+
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Why It Matters}
+
+The digital economy is shifting from extraction to activation. Traditional platforms capture user effort without recognition. Legacy credentials lack proof. Emerging ecosystems are often inaccessible.
+
+Money Factory AI changes the game by:
+
+\begin{itemize}
+    \item Creating \textbf{on-chain ownership} of learning, skill, and participation
+    \item Converting education into a new asset class with tangible returns
+    \item Equipping each user with the tools to launch a scalable, Web3-ready \textbf{Business 3.0}
+\end{itemize}
+
+\subsection*{Key Differentiators}
+
+\begin{center}
+\begin{tblr}[
+  theme = mfai,
+  colspec = {X[2] X[4] X[4]},
+]
+\hline
+\textbf{Aspect} & \textbf{Traditional Platforms} & \textbf{Money Factory AI Protocol} \\
+\hline
+Credentials & Static certificates & \textbf{Proof Pass™} NFTs \\
+Learning & Passive content & Gamified \& AI-personalized \\
+Governance & Centralized & \textbf{Synaptic DAO} driven by proof \\
+Token Utility & Speculative asset & Linked to \mfaiprove{Proof} \& \mfaiscale{Action} \\
+AI Role & Absent or generic & \textbf{Zyno™} — Co-Founder Intelligence \\
+Ownership & Platform-owned & User-sovereign capital \& data \\
+\hline
+\end{tblr}
+\end{center}
+
+\subsection*{The \texttt{\$MFAI} Token}
+
+The \texttt{\$MFAI} token is the lifeblood of the ecosystem. It rewards, activates, and sustains participation:
+
+\begin{itemize}
+    \item \faKey\quad Access to learning tools, certifications, and features
+    \item \faLock\quad Staking for governance and feature unlocks
+    \item \faGem\quad NFT Pass utility (Gold, Platinum, Diamond tiers)
+    \item \faChartLine\quad Used in launchpad, airdrops, and incubation
+    \item \faFire\quad Subject to burn \& buyback to ensure long-term value
+\end{itemize}
+
+\begin{mfai-box-star}{From Skillchains to Sovereignty}{sitemap}
+The name \textbf{Money Factory AI} is intentional. It is a place of \textbf{production} — where knowledge becomes capital, where vision becomes a project, and where effort becomes equity.
+
+\textbf{AI} means more than Artificial Intelligence. It also stands for \textbf{Ademy Innovation} — the fusion of entrepreneurial mindset, smart learning, and community-driven incubation.
+
+This is not just a factory. It’s a protocol for the future of business.
+\end{mfai-box-star}
+
+\end{document}
